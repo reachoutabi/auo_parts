@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AutoParts Pro Storefront</title>
+    <!-- Favicon / Browser Tab Save Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="Get in touch with our spare parts specialists. Submit vehicle fitment inquiries, branch location details, or phone hotline support.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { red: '#DC2626', dark: '#0F172A', accent: '#2563EB', amber: '#D97706', slate: '#1E293B' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+
+
+                                            <!-- Main Navigation Header (Sticky) -->
+    <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
+        <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-2">
+            <div class="flex items-center justify-between gap-2 sm:gap-4">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
+                    <div class="w-8 sm:w-10 h-8 sm:h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-base sm:text-xl font-black group-hover:scale-105 transition-transform shadow-md shadow-red-600/30">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <div class="text-base sm:text-xl font-black tracking-tight text-white flex items-center gap-1 leading-tight">
+                            AUTO<span class="text-red-600">PARTS</span>
+                        </div>
+                        <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none">PRO STOREFRONT</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links (Visible on lg and up) -->
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-3 text-[11px] xl:text-xs font-semibold whitespace-nowrap flex-shrink-0">
+                    <!-- Home Dropdown Menu -->
+                    <div class="relative nav-dropdown-parent group py-1 cursor-pointer select-none whitespace-nowrap">
+                        <button type="button" class="flex items-center gap-1 text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap focus:outline-none">
+                            <span>Home</span>
+                            <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform duration-200"></i>
+                        </button>
+
+                        <!-- Dropdown Menu Content -->
+                        <div class="nav-dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-2xl rounded-2xl border border-slate-200 dark:border-slate-700 p-2.5 z-50 space-y-1.5 whitespace-normal">
+                            <!-- Home Page 1 -->
+                            <a href="index.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-red-600 transition-colors">Home Page 1</span>
+                                    <span class="text-[9px] bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 font-extrabold px-1.5 py-0.5 rounded">Retail</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">General Retail Landing</div>
+                            </a>
+
+                            <!-- Home Page 2 -->
+                            <a href="trade.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-amber-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-amber-500 transition-colors">Home Page 2</span>
+                                    <span class="text-[9px] bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-extrabold px-1.5 py-0.5 rounded">B2B Trade</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">Trade / Workshop Portal</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="products.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Products</a>
+                    <a href="compatibility-finder.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Finder</a>
+                    <a href="brands.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Brands</a>
+                    <a href="bulk-pricing.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Bulk Pricing</a>
+                    <a href="about.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">About Us</a>
+                    <a href="blog.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Tech Blog</a>
+                    <a href="contact.html" class="text-red-500 font-bold border-b-2 border-red-500 pb-0.5 px-1 xl:px-1.5 rounded transition-colors whitespace-nowrap">Contact</a>
+                </nav>
+
+                <!-- Header Actions (Compare, Wishlist, Theme, RTL, Auth, Cart, Mobile Menu) -->
+                <div class="flex items-center gap-1 sm:gap-1.5 xl:gap-2 flex-shrink-0">
+                    <!-- Compare Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.openCompareModal()" class="hidden sm:inline-flex relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Compare Products">
+                        <i class="fa-solid fa-code-compare text-sm sm:text-lg"></i>
+                        <span class="js-compare-count-badge hidden absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Wishlist Button -->
+                    <a href="account.html#wishlist" class="relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Wishlist">
+                        <i class="fa-solid fa-heart text-sm sm:text-lg"></i>
+                        <span class="js-wishlist-count-badge hidden absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </a>
+
+                    <!-- Theme Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleTheme()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-amber-400 transition-colors flex-shrink-0" title="Toggle Dark/Light Theme" aria-label="Toggle Dark/Light Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm sm:text-lg text-amber-400"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-sm sm:text-lg text-amber-400"></i>
+                    </button>
+
+                    <!-- RTL Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleRTL()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-blue-400 transition-colors flex-shrink-0" title="Toggle LTR/RTL Layout" aria-label="Toggle LTR/RTL Layout">
+                        <i class="fa-solid fa-right-left text-sm sm:text-lg text-blue-400"></i>
+                    </button>
+
+                    <!-- Login / Account Link -->
+                    <a href="login.html" class="js-auth-top-link hidden lg:inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Log In to your Account">
+                        <i class="fa-solid fa-right-to-bracket text-sm sm:text-lg"></i>
+                    </a>
+
+                    <!-- Cart Drawer Trigger Button (My Cart) -->
+                    <button type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
+                        <div class="relative">
+                            <i class="fa-solid fa-cart-shopping text-sm sm:text-base"></i>
+                            <span class="js-cart-count-badge hidden absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-slate-900">0</span>
+                        </div>
+                        <div class="hidden xl:block text-start">
+                            <div class="text-[9px] uppercase tracking-wider text-slate-400 leading-none">My Cart</div>
+                            <div class="js-cart-subtotal-display font-extrabold text-xs text-white">$0.00</div>
+                        </div>
+                    </button>
+
+                    <!-- Prominent Mobile Menu Hamburger Button (Always visible & accessible below lg) -->
+                    <button type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
+                        <i class="fa-solid fa-bars text-sm sm:text-base"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-wider hidden xs:inline">Menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Standardized Hero Section -->
+        <section class="page-hero">
+            <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,38,38,0.18),rgba(0,0,0,0))] pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
+                <span class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2 block">Customer Support & Technical Inquiries</span>
+                <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Contact Our Spare Parts Specialists</h1>
+                <p class="text-xs sm:text-sm text-slate-300 mt-2 max-w-xl mx-auto">Have a question about fitment, OEM supersessions, or bulk delivery schedules? We're here to help.</p>
+            </div>
+        </section>
+
+        <div class="py-12 max-w-7xl mx-auto px-4 w-full space-y-12">
+
+        <!-- Form & Branches Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Contact Form with Vehicle & Part SKU fields -->
+            <div class="lg:col-span-7 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-xl">
+                <h3 class="text-xl font-black text-slate-900 dark:text-white mb-2">Send a Technical Enquiry</h3>
+                <p class="text-xs text-slate-500 mb-6">Include your vehicle Make/Model or target Part Number for instant cross-referencing.</p>
+
+                <form onsubmit="event.preventDefault(); AutoPartsUI.showToast('Enquiry submitted! Our parts technician will respond within 1 business hour.', 'success'); this.reset();" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Your Full Name</label>
+                            <input type="text" required placeholder="John Doe" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:ring-2 focus:ring-red-600 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+                            <input type="email" required placeholder="john@example.com" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:ring-2 focus:ring-red-600 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Vehicle Details (Make/Model/Year)</label>
+                            <input type="text" placeholder="e.g. 2018 Toyota Camry 3.5L" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:ring-2 focus:ring-red-600 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Part SKU / OEM Number (Optional)</label>
+                            <input type="text" placeholder="e.g. BRK-BM-5012 / 34116792223" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:ring-2 focus:ring-red-600 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Enquiry Message</label>
+                        <textarea rows="4" required placeholder="Describe your part request or compatibility question..." class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl p-3 text-xs font-semibold focus:ring-2 focus:ring-red-600 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/30 transition-all">
+                        Send Message to Technician
+                    </button>
+                </form>
+            </div>
+
+            <!-- Branch Locations -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-warehouse text-red-600"></i> Central Logistics Hub (Detroit)
+                    </h3>
+                    <div class="text-xs text-slate-600 dark:text-slate-400 space-y-2">
+                        <div><i class="fa-solid fa-location-dot text-red-500 me-2"></i> 4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</div>
+                        <div><i class="fa-solid fa-phone text-red-500 me-2"></i> +1 (800) 555-AUTO (2886)</div>
+                        <div><i class="fa-solid fa-clock text-red-500 me-2"></i> Mon–Fri: 7:00 AM – 7:00 PM EST</div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-truck-ramp-box text-blue-600"></i> Midwest Fulfillment Hub (Chicago)
+                    </h3>
+                    <div class="text-xs text-slate-600 dark:text-slate-400 space-y-2">
+                        <div><i class="fa-solid fa-location-dot text-blue-500 me-2"></i> 1290 Freight Way, Chicago, IL 60607</div>
+                        <div><i class="fa-solid fa-envelope text-blue-500 me-2"></i> chicago-warehouse@autopartspro.com</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Dedicated Interactive Location & Map Section -->
+        <section class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-8 shadow-xl space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-700 pb-6">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-red-600 dark:text-red-400 mb-1">
+                        <i class="fa-solid fa-map-pin"></i> Direct Warehouse Pickup & Distribution Centers
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+                        <span>Our Distribution Network</span>
+                    </h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Visit our main fulfillment hubs for trade counter pickup, parts inspection, or express logistics support.</p>
+                </div>
+                
+                <!-- Hub Selection Tabs -->
+                <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs font-bold flex-shrink-0">
+                    <button type="button" id="map-tab-detroit" onclick="switchMapLocation('detroit')" class="px-4 py-2 rounded-xl bg-red-600 text-white shadow-md transition-all flex items-center gap-2 font-bold">
+                        <i class="fa-solid fa-warehouse"></i>
+                        <span>Detroit HQ (Central)</span>
+                    </button>
+                    <button type="button" id="map-tab-chicago" onclick="switchMapLocation('chicago')" class="px-4 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-2 font-bold">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        <span>Chicago Depot</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Map & Location Info Layout Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <!-- Interactive Embedded Map Container -->
+                <div class="lg:col-span-8 relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-inner bg-slate-100 dark:bg-slate-900 min-h-[380px] flex flex-col">
+                    <iframe id="contact-map-iframe" 
+                            src="https://maps.google.com/maps?q=4820+Motorway+Industrial+Park+Detroit+MI+48201&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            class="w-full h-full min-h-[380px] border-0 rounded-2xl filter dark:contrast-125 dark:brightness-90 transition-all" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            title="AutoParts Pro Central Depot Location Map">
+                    </iframe>
+                    <!-- Map Badge Overlay -->
+                    <div class="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md text-white px-3 py-1.5 rounded-xl border border-slate-700 text-xs font-bold shadow-lg flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span id="map-overlay-title">Central Depot: Detroit, MI</span>
+                    </div>
+                </div>
+
+                <!-- Location Details & Quick Actions Panel -->
+                <div class="lg:col-span-4 bg-slate-50 dark:bg-slate-900/80 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest bg-red-100 dark:bg-red-950/80 text-red-600 dark:text-red-400 px-2.5 py-1 rounded-lg">Will-Call & Trade Counter</span>
+                            <span class="text-xs font-bold text-emerald-500 flex items-center gap-1">
+                                <i class="fa-solid fa-circle text-[8px]"></i> Open Now
+                            </span>
+                        </div>
+
+                        <div id="location-info-block" class="space-y-3">
+                            <h3 class="text-lg font-black text-slate-900 dark:text-white" id="location-name">Detroit Central Logistics HQ</h3>
+                            <div class="text-xs font-semibold text-slate-600 dark:text-slate-300 space-y-2.5">
+                                <p class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-location-dot text-red-600 text-sm mt-0.5 flex-shrink-0"></i>
+                                    <span id="location-address">4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</span>
+                                </p>
+                                <p class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-clock text-blue-500 text-sm flex-shrink-0"></i>
+                                    <span id="location-hours">Mon – Fri: 7:00 AM – 7:00 PM EST (Sat: 8 AM - 4 PM)</span>
+                                </p>
+                                <p class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-phone text-emerald-500 text-sm flex-shrink-0"></i>
+                                    <span id="location-phone">+1 (800) 555-AUTO (2886) - Ext. 1</span>
+                                </p>
+                                <p class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-envelope text-amber-500 text-sm flex-shrink-0"></i>
+                                    <span id="location-email">detroit-depot@autopartspro.com</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 border-t border-slate-200 dark:border-slate-800">
+                            <div class="text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-2">Facility Highlights:</div>
+                            <div class="grid grid-cols-2 gap-2 text-[11px] font-bold">
+                                <div class="bg-white dark:bg-slate-800 p-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-square-check text-emerald-500"></i> Trade Will-Call
+                                </div>
+                                <div class="bg-white dark:bg-slate-800 p-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-truck-fast text-red-500"></i> Express Loading Dock
+                                </div>
+                                <div class="bg-white dark:bg-slate-800 p-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-square-check text-blue-500"></i> OEM Tech Desk
+                                </div>
+                                <div class="bg-white dark:bg-slate-800 p-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-square-check text-purple-500"></i> Free Rig Parking
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="space-y-2 pt-2">
+                        <a id="location-directions-btn" href="https://maps.google.com/?q=4820+Motorway+Industrial+Park+Detroit+MI+48201" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-md flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            <span>Get Driving Directions</span>
+                        </a>
+                        <a href="tel:+18005552886" class="w-full py-2.5 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs rounded-xl border border-slate-300 dark:border-slate-600 flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-solid fa-phone text-red-500"></i>
+                            <span>Call Trade Desk</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function switchMapLocation(locationKey) {
+                    const mapIframe = document.getElementById('contact-map-iframe');
+                    const mapTitle = document.getElementById('map-overlay-title');
+                    const nameEl = document.getElementById('location-name');
+                    const addrEl = document.getElementById('location-address');
+                    const hoursEl = document.getElementById('location-hours');
+                    const phoneEl = document.getElementById('location-phone');
+                    const emailEl = document.getElementById('location-email');
+                    const dirBtn = document.getElementById('location-directions-btn');
+                    
+                    const tabDetroit = document.getElementById('map-tab-detroit');
+                    const tabChicago = document.getElementById('map-tab-chicago');
+
+                    if (locationKey === 'detroit') {
+                        mapIframe.src = "https://maps.google.com/maps?q=4820+Motorway+Industrial+Park+Detroit+MI+48201&t=&z=14&ie=UTF8&iwloc=&output=embed";
+                        mapTitle.textContent = "Central Depot: Detroit, MI";
+                        nameEl.textContent = "Detroit Central Logistics HQ";
+                        addrEl.textContent = "4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201";
+                        hoursEl.textContent = "Mon – Fri: 7:00 AM – 7:00 PM EST (Sat: 8 AM - 4 PM)";
+                        phoneEl.textContent = "+1 (800) 555-AUTO (2886) - Ext. 1";
+                        emailEl.textContent = "detroit-depot@autopartspro.com";
+                        dirBtn.href = "https://maps.google.com/?q=4820+Motorway+Industrial+Park+Detroit+MI+48201";
+
+                        tabDetroit.className = "px-4 py-2 rounded-xl bg-red-600 text-white shadow-md transition-all flex items-center gap-2 font-bold";
+                        tabChicago.className = "px-4 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-2 font-bold";
+                    } else if (locationKey === 'chicago') {
+                        mapIframe.src = "https://maps.google.com/maps?q=1290+Freight+Way+Chicago+IL+60607&t=&z=14&ie=UTF8&iwloc=&output=embed";
+                        mapTitle.textContent = "Midwest Depot: Chicago, IL";
+                        nameEl.textContent = "Chicago Midwest Fulfillment Hub";
+                        addrEl.textContent = "1290 Freight Way, Chicago, IL 60607";
+                        hoursEl.textContent = "Mon – Fri: 6:00 AM – 8:00 PM CST (Sat: 7 AM - 5 PM)";
+                        phoneEl.textContent = "+1 (800) 555-AUTO (2886) - Ext. 2";
+                        emailEl.textContent = "chicago-warehouse@autopartspro.com";
+                        dirBtn.href = "https://maps.google.com/?q=1290+Freight+Way+Chicago+IL+60607";
+
+                        tabChicago.className = "px-4 py-2 rounded-xl bg-red-600 text-white shadow-md transition-all flex items-center gap-2 font-bold";
+                        tabDetroit.className = "px-4 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all flex items-center gap-2 font-bold";
+                    }
+                }
+            </script>
+        </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                
+                <!-- Col 1: Store Intro -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-xl font-black">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div class="text-xl font-black tracking-tight text-white">
+                            AUTO<span class="text-red-600">PARTS</span> PRO
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        Premier catalog storefront for genuine OEM and high-performance aftermarket auto spare parts. Serving retail drivers, trade technicians, and commercial workshops worldwide.
+                    </p>
+                    <div class="flex items-center gap-2.5 pt-2 text-slate-400 text-sm">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="Follow us on X" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-slate-800 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-slate-600"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#dc2743]"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Subscribe on YouTube" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#FF0000]"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Connect on LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#0A66C2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#0A66C2]"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products Catalog</a></li>
+                        <li><a href="compatibility-finder.html" class="hover:text-white transition-colors">Compatibility Finder</a></li>
+                        <li><a href="brands.html" class="hover:text-white transition-colors">Brands Directory</a></li>
+                        <li><a href="bulk-pricing.html" class="hover:text-white transition-colors">Bulk Workshop Pricing</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Customer Care -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Policies & Help</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing & Policy</a></li>
+                        <li><a href="cart.html" class="hover:text-white transition-colors">Shopping Cart</a></li>
+                        <li><a href="account.html" class="hover:text-white transition-colors">Customer Account</a></li>
+                        <li><a href="login.html" class="hover:text-white transition-colors">Customer Login</a></li>
+                        <li><a href="404.html" class="hover:text-white transition-colors">404 Error Page</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-white transition-colors">Maintenance Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Store Info -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Warehouse Location</h4>
+                    <div class="space-y-3 text-xs text-slate-400">
+                        <div class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-red-500 mt-0.5"></i>
+                            <span>4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-red-500"></i>
+                            <span>+1 (800) 555-AUTO</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-red-500"></i>
+                            <span>parts@autopartspro.com</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-red-500"></i>
+                            <span>Mon–Fri: 7am – 7pm EST</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div>&copy; 2026 AutoParts Pro. All rights reserved. ThemeForest Ready Frontend HTML Template.</div>
+                <div class="flex items-center gap-4 text-lg text-slate-600">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-IN CART DRAWER & MODALS -->
+    <div id="cart-drawer-backdrop" onclick="AutoPartsUI.toggleCartDrawer(false)" class="hidden opacity-0 fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 transition-opacity"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-slate-900 shadow-2xl z-50 transform translate-x-full transition-transform flex flex-col justify-between border-s border-slate-200 dark:border-slate-800">
+        <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <div class="font-bold text-slate-900 dark:text-white flex items-center gap-2"><i class="fa-solid fa-basket-shopping text-red-600"></i> Shopping Cart</div>
+            <button type="button" onclick="AutoPartsUI.toggleCartDrawer(false)"><i class="fa-solid fa-xmark text-lg"></i></button>
+        </div>
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
+        <div class="p-5 border-t border-slate-200 dark:border-slate-800 space-y-3">
+            <div class="flex justify-between text-xs"><span>Subtotal:</span><span class="js-cart-subtotal-display font-bold">$0.00</span></div>
+            <a href="checkout.html" class="block py-3 bg-red-600 text-white text-center font-bold text-xs rounded-xl">Checkout Now</a>
+        </div>
+    </aside>
+
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/compatibility-finder.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- SLIDE-IN CART DRAWER CONTAINER -->
+    <div id="cart-drawer-backdrop" onclick="AutoPartsUI.toggleCartDrawer(false)" class="hidden opacity-0 fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 transition-opacity duration-300"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-slate-900 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between border-s border-slate-200 dark:border-slate-800">
+        <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white text-base">
+                <i class="fa-solid fa-basket-shopping text-red-600"></i>
+                <span>Your Shopping Cart</span>
+                <span class="js-cart-count-badge bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+            </div>
+            <button type="button" onclick="AutoPartsUI.toggleCartDrawer(false)" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
+        <div class="p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 space-y-3">
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400">
+                <span>Subtotal:</span>
+                <span class="js-cart-subtotal-display font-bold text-slate-900 dark:text-white">$0.00</span>
+            </div>
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400">
+                <span>Estimated Shipping:</span>
+                <span class="text-emerald-600 font-semibold">Calculated at checkout</span>
+            </div>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-700 flex justify-between text-sm font-extrabold text-slate-900 dark:text-white">
+                <span>Total Amount:</span>
+                <span class="js-cart-subtotal-display text-red-600 dark:text-red-400">$0.00</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+                <a href="cart.html" onclick="AutoPartsUI.toggleCartDrawer(false)" class="py-3 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-800 dark:text-white text-center font-bold text-xs rounded-xl transition-colors">
+                    View Cart
+                </a>
+                <a href="checkout.html" onclick="AutoPartsUI.toggleCartDrawer(false)" class="py-3 bg-red-600 hover:bg-red-700 text-white text-center font-bold text-xs rounded-xl transition-colors shadow-lg shadow-red-600/30">
+                    Checkout Now
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- QUICK VIEW MODAL CONTAINER -->
+    <div id="quick-view-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-3xl w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <button type="button" onclick="AutoPartsUI.closeQuickView()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="quick-view-content"></div>
+        </div>
+    </div>
+
+    <!-- COMPARE MODAL CONTAINER -->
+    <div id="compare-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-4xl w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-2 text-lg font-black text-slate-900 dark:text-white">
+                    <i class="fa-solid fa-code-compare text-red-600"></i>
+                    <span>Product Specification Comparison</span>
+                </div>
+                <button type="button" onclick="AutoPartsUI.closeCompareModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="compare-modal-content"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog System Maintenance - AutoParts Pro</title>
+    <!-- Favicon / Browser Tab Save Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="We are performing warehouse catalog upgrades. We will be back online shortly.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { red: '#DC2626', dark: '#0F172A', accent: '#2563EB', amber: '#D97706', slate: '#1E293B' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-white min-h-screen flex flex-col items-center justify-center p-4 antialiased relative overflow-hidden transition-colors">
+
+    <!-- Background Image Overlay -->
+    <div class="absolute inset-0 z-0 opacity-10 dark:opacity-20 pointer-events-none">
+        <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover">
+    </div>
+
+    <div class="relative z-10 max-w-xl w-full text-center space-y-8">
+        
+        <a href="index.html" class="inline-flex items-center gap-2 group">
+            <div class="w-12 h-12 bg-red-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-xl"><i class="fa-solid fa-gears"></i></div>
+            <div class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">AUTO<span class="text-red-600">PARTS</span> PRO</div>
+        </a>
+
+        <div class="space-y-3">
+            <span class="bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full border border-amber-500/30">Warehouse System Maintenance</span>
+            <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white">We're Upgrading Our Catalog Database</h1>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+                Adding 15,000+ new verified OEM schematics for 2026 vehicle models. We will resume order processing in:
+            </p>
+        </div>
+
+        <!-- Countdown Timer Box -->
+        <div class="grid grid-cols-4 gap-4 max-w-md mx-auto">
+            <div class="bg-white dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md">
+                <span id="cs-days" class="block text-3xl font-black text-slate-900 dark:text-white">04</span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Days</span>
+            </div>
+            <div class="bg-white dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md">
+                <span id="cs-hours" class="block text-3xl font-black text-slate-900 dark:text-white">18</span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Hours</span>
+            </div>
+            <div class="bg-white dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md">
+                <span id="cs-mins" class="block text-3xl font-black text-slate-900 dark:text-white">42</span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Mins</span>
+            </div>
+            <div class="bg-white dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md">
+                <span id="cs-secs" class="block text-3xl font-black text-red-600 dark:text-red-500">19</span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Secs</span>
+            </div>
+        </div>
+
+        <!-- Email Notify Form -->
+        <form onsubmit="event.preventDefault(); alert('Subscribed for re-opening alerts!'); this.reset();" class="flex gap-2 max-w-md mx-auto">
+            <input type="email" required placeholder="Enter workshop or personal email..." class="flex-1 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-xs font-semibold focus:ring-2 focus:ring-red-600 focus:outline-none text-slate-900 dark:text-white shadow-sm">
+            <button type="submit" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl shadow-lg shadow-red-600/30 transition-colors">
+                Notify Me
+            </button>
+        </form>
+
+        <div class="flex items-center justify-center gap-4 text-xs text-slate-500 pt-2">
+            <span>Emergency parts support? <span class="font-bold text-slate-900 dark:text-white">+1 (800) 555-AUTO</span></span>
+            <span>•</span>
+            <div class="flex items-center gap-2">
+                <button type="button" onclick="AutoPartsUI.toggleTheme()" class="w-7 h-7 rounded-lg text-slate-500 hover:text-amber-500 flex items-center justify-center transition-colors" title="Toggle theme" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:inline text-amber-400"></i>
+                </button>
+                <button type="button" onclick="AutoPartsUI.toggleRTL()" class="w-7 h-7 rounded-lg text-slate-500 hover:text-blue-500 flex items-center justify-center transition-colors" title="Toggle RTL layout" aria-label="Toggle RTL layout">
+                    <i class="fa-solid fa-right-left text-blue-500 text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple countdown timer animation script
+        let secs = 19;
+        setInterval(() => {
+            if (secs > 0) secs--;
+            else secs = 59;
+            const el = document.getElementById('cs-secs');
+            if (el) el.textContent = secs < 10 ? '0' + secs : secs;
+        }, 1000);
+    </script>
+</body>
+</html>

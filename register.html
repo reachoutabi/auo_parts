@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration - AutoParts Pro</title>
+    <!-- Favicon / Browser Tab Save Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="Create an account to unlock trade discounts, save vehicles, and track shipments.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { red: '#DC2626', dark: '#0F172A', accent: '#2563EB', amber: '#D97706', slate: '#1E293B' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 antialiased selection:bg-red-600 selection:text-white transition-colors">
+
+    <div class="w-full max-w-lg bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-2xl space-y-6">
+        <!-- Auth Notice Banner for Checkout Protection -->
+        <div id="reg-auth-notice" class="hidden bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 p-3.5 rounded-2xl text-xs font-bold flex items-center gap-2.5 shadow-sm">
+            <i class="fa-solid fa-lock text-sm text-amber-500 flex-shrink-0"></i>
+            <span>Please create an account or sign in to complete your order checkout.</span>
+        </div>
+
+        <div class="text-center space-y-2">
+            <a href="index.html" class="inline-flex items-center gap-2 group mb-2">
+                <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-xl font-black shadow-md shadow-red-600/30"><i class="fa-solid fa-gears"></i></div>
+                <div class="text-xl font-black text-slate-900 dark:text-white">AUTO<span class="text-red-600">PARTS</span> PRO</div>
+            </a>
+            <h1 class="text-2xl font-black text-slate-900 dark:text-white">Create New Account</h1>
+            <p class="text-xs text-slate-500">Join over 4,500 workshops and retail buyers worldwide.</p>
+        </div>
+
+        <!-- Social Sign-in Options (Google & Apple) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <!-- Google Sign-in Button -->
+            <button type="button" onclick="handleSocialRegister('Google')" class="w-full py-3 px-4 bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-600 rounded-xl font-bold text-xs flex items-center justify-center gap-2.5 transition-all shadow-sm hover:shadow active:scale-[0.99] group">
+                <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+                <span>Google</span>
+            </button>
+
+            <!-- Apple Sign-in Button -->
+            <button type="button" onclick="handleSocialRegister('Apple')" class="w-full py-3 px-4 bg-black hover:bg-neutral-900 text-white dark:bg-white dark:text-black dark:hover:bg-slate-200 border border-black dark:border-white rounded-xl font-bold text-xs flex items-center justify-center gap-2.5 transition-all shadow-sm hover:shadow active:scale-[0.99] group">
+                <i class="fa-brands fa-apple text-base mb-0.5 flex-shrink-0"></i>
+                <span>Apple</span>
+            </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="relative flex items-center justify-center my-1">
+            <div class="border-t border-slate-200 dark:border-slate-700 w-full"></div>
+            <span class="bg-white dark:bg-slate-800 px-3 text-[11px] font-semibold text-slate-400 uppercase tracking-wider absolute">or register with email</span>
+        </div>
+
+        <form onsubmit="handleRegister(event)" class="space-y-4">
+            
+            <!-- Account Type Selection -->
+            <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Select Account Type</label>
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="p-3 rounded-xl border-2 border-red-600 bg-red-50/50 dark:bg-red-950/20 text-center cursor-pointer block">
+                        <input type="radio" name="accountType" value="retail" checked class="hidden">
+                        <i class="fa-solid fa-car text-red-600 mb-1 block"></i>
+                        <span class="font-bold text-xs">Retail Driver</span>
+                    </label>
+                    <label class="p-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-red-600 text-center cursor-pointer block">
+                        <input type="radio" name="accountType" value="workshop" class="hidden">
+                        <i class="fa-solid fa-wrench text-blue-600 mb-1 block"></i>
+                        <span class="font-bold text-xs">Workshop / Trade</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
+                    <input type="text" id="reg-name" required placeholder="John Vance" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-red-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Company / Workshop Name</label>
+                    <input type="text" id="reg-company" placeholder="Vance Auto Repair" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-red-600">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+                <input type="email" id="reg-email" required placeholder="john@vancemotors.com" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-red-600">
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Password</label>
+                <input type="password" id="reg-pwd" required placeholder="••••••••" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-red-600">
+            </div>
+
+            <div class="flex items-center gap-2">
+                <input type="checkbox" required id="reg-terms" class="w-4 h-4 rounded">
+                <label for="reg-terms" class="text-xs text-slate-500">I agree to the <a href="pricing.html" class="text-red-600 font-bold hover:underline">Terms of Service</a> & Privacy Policy</label>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/30 transition-all">
+                Create Account & Claim Trade Discounts
+            </button>
+        </form>
+
+        <div class="text-center text-xs text-slate-500 pt-3 border-t border-slate-100 dark:border-slate-700">
+            <div>Already registered? <a href="login.html" class="font-bold text-red-600 dark:text-red-400 hover:underline">Sign In</a></div>
+        </div>
+    </div>
+
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirect = urlParams.get('redirect');
+            if (redirect === 'checkout.html') {
+                const notice = document.getElementById('reg-auth-notice');
+                if (notice) notice.classList.remove('hidden');
+                
+                const loginLink = document.querySelector('a[href="login.html"]');
+                if (loginLink) loginLink.href = 'login.html?redirect=checkout.html';
+            }
+        });
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const company = document.getElementById('reg-company').value;
+            window.AutoPartsStore.saveUser({
+                id: `usr_${Math.floor(Math.random() * 90000)}`,
+                name: name,
+                email: email,
+                accountType: company ? 'Workshop Trade Account' : 'Retail Account',
+                companyName: company || 'Personal Vehicle Owner',
+                isLoggedIn: true
+            });
+            const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'account.html';
+            window.location.href = redirectTarget;
+        }
+
+        function handleSocialRegister(provider) {
+            const isGoogle = provider === 'Google';
+            const email = isGoogle ? 'new.user@gmail.com' : 'new.user@icloud.com';
+            const name = isGoogle ? 'Google Verified Customer' : 'Apple Verified Customer';
+
+            if (window.AutoPartsUI && window.AutoPartsUI.showToast) {
+                window.AutoPartsUI.showToast(`Creating account with ${provider}...`, 'info');
+            }
+            
+            setTimeout(() => {
+                window.AutoPartsStore.saveUser({
+                    id: `usr_${provider.toLowerCase()}_${Math.floor(1000 + Math.random() * 9000)}`,
+                    name: name,
+                    email: email,
+                    accountType: "Verified Trade Customer",
+                    companyName: "Auto Tech Solutions",
+                    provider: provider,
+                    isLoggedIn: true
+                });
+                if (window.AutoPartsUI && window.AutoPartsUI.showToast) {
+                    window.AutoPartsUI.showToast(`Account created with ${provider}! Welcome.`, 'success');
+                }
+                setTimeout(() => {
+                    const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'account.html';
+                    window.location.href = redirectTarget;
+                }, 300);
+            }, 500);
+        }
+    </script>
+</body>
+</html>

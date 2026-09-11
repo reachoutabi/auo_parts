@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AutoParts Pro Storefront</title>
+    <!-- Favicon / Browser Tab Save Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="Complete your spare parts purchase. Fast checkout with credit card, PayPal, or Workshop Net-30 trade account invoicing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { red: '#DC2626', dark: '#0F172A', accent: '#2563EB', amber: '#D97706', slate: '#1E293B' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+
+
+                                            <!-- Main Navigation Header (Sticky) -->
+    <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
+        <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-2">
+            <div class="flex items-center justify-between gap-2 sm:gap-4">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
+                    <div class="w-8 sm:w-10 h-8 sm:h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-base sm:text-xl font-black group-hover:scale-105 transition-transform shadow-md shadow-red-600/30">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <div class="text-base sm:text-xl font-black tracking-tight text-white flex items-center gap-1 leading-tight">
+                            AUTO<span class="text-red-600">PARTS</span>
+                        </div>
+                        <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none">PRO STOREFRONT</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links (Visible on lg and up) -->
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-3 text-[11px] xl:text-xs font-semibold whitespace-nowrap flex-shrink-0">
+                    <!-- Home Dropdown Menu -->
+                    <div class="relative nav-dropdown-parent group py-1 cursor-pointer select-none whitespace-nowrap">
+                        <button type="button" class="flex items-center gap-1 text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap focus:outline-none">
+                            <span>Home</span>
+                            <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform duration-200"></i>
+                        </button>
+
+                        <!-- Dropdown Menu Content -->
+                        <div class="nav-dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-2xl rounded-2xl border border-slate-200 dark:border-slate-700 p-2.5 z-50 space-y-1.5 whitespace-normal">
+                            <!-- Home Page 1 -->
+                            <a href="index.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-red-600 transition-colors">Home Page 1</span>
+                                    <span class="text-[9px] bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 font-extrabold px-1.5 py-0.5 rounded">Retail</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">General Retail Landing</div>
+                            </a>
+
+                            <!-- Home Page 2 -->
+                            <a href="trade.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-amber-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-amber-500 transition-colors">Home Page 2</span>
+                                    <span class="text-[9px] bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-extrabold px-1.5 py-0.5 rounded">B2B Trade</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">Trade / Workshop Portal</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="products.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Products</a>
+                    <a href="compatibility-finder.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Finder</a>
+                    <a href="brands.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Brands</a>
+                    <a href="bulk-pricing.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Bulk Pricing</a>
+                    <a href="about.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">About Us</a>
+                    <a href="blog.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Tech Blog</a>
+                    <a href="contact.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Contact</a>
+                </nav>
+
+                <!-- Header Actions (Compare, Wishlist, Theme, RTL, Auth, Cart, Mobile Menu) -->
+                <div class="flex items-center gap-1 sm:gap-1.5 xl:gap-2 flex-shrink-0">
+                    <!-- Compare Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.openCompareModal()" class="hidden sm:inline-flex relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Compare Products">
+                        <i class="fa-solid fa-code-compare text-sm sm:text-lg"></i>
+                        <span class="js-compare-count-badge hidden absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Wishlist Button -->
+                    <a href="account.html#wishlist" class="relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Wishlist">
+                        <i class="fa-solid fa-heart text-sm sm:text-lg"></i>
+                        <span class="js-wishlist-count-badge hidden absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </a>
+
+                    <!-- Theme Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleTheme()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-amber-400 transition-colors flex-shrink-0" title="Toggle Dark/Light Theme" aria-label="Toggle Dark/Light Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm sm:text-lg text-amber-400"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-sm sm:text-lg text-amber-400"></i>
+                    </button>
+
+                    <!-- RTL Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleRTL()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-blue-400 transition-colors flex-shrink-0" title="Toggle LTR/RTL Layout" aria-label="Toggle LTR/RTL Layout">
+                        <i class="fa-solid fa-right-left text-sm sm:text-lg text-blue-400"></i>
+                    </button>
+
+                    <!-- Login / Account Link -->
+                    <a href="login.html" class="js-auth-top-link hidden lg:inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Log In to your Account">
+                        <i class="fa-solid fa-right-to-bracket text-sm sm:text-lg"></i>
+                    </a>
+
+                    <!-- Cart Drawer Trigger Button (My Cart) -->
+                    <button type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
+                        <div class="relative">
+                            <i class="fa-solid fa-cart-shopping text-sm sm:text-base"></i>
+                            <span class="js-cart-count-badge hidden absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-slate-900">0</span>
+                        </div>
+                        <div class="hidden xl:block text-start">
+                            <div class="text-[9px] uppercase tracking-wider text-slate-400 leading-none">My Cart</div>
+                            <div class="js-cart-subtotal-display font-extrabold text-xs text-white">$0.00</div>
+                        </div>
+                    </button>
+
+                    <!-- Prominent Mobile Menu Hamburger Button (Always visible & accessible below lg) -->
+                    <button type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
+                        <i class="fa-solid fa-bars text-sm sm:text-base"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-wider hidden xs:inline">Menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 py-8 max-w-7xl mx-auto px-4 w-full">
+        <form id="checkout-form" onsubmit="handlePlaceOrder(event)" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left: Checkout Forms -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <!-- 1. Customer Info -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-lg font-black text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-xs">1</span> Customer & Business Information
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">First Name</label>
+                            <input type="text" id="cust-fname" required value="Alex" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Last Name</label>
+                            <input type="text" id="cust-lname" required value="Morgan" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+                            <input type="email" id="cust-email" required value="alex.morgan@workshop-solutions.com" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
+                            <input type="tel" id="cust-phone" required value="+1 (555) 382-9102" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Shipping Address -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-lg font-black text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-xs">2</span> Delivery Shipping Address
+                    </h3>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Street Address / Workshop Location</label>
+                        <input type="text" id="cust-address" required value="4820 Motorway Industrial Park, Suite 100" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">City</label>
+                            <input type="text" id="cust-city" required value="Detroit" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">State / Province</label>
+                            <input type="text" id="cust-state" required value="MI" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Postal Code</label>
+                            <input type="text" id="cust-zip" required value="48201" class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Payment Method Selection -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-sm space-y-5">
+                    <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+                        <h3 class="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
+                            <span class="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-xs">3</span> Payment Service Selection
+                        </h3>
+                        <span class="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                            <i class="fa-solid fa-lock text-xs"></i> 256-Bit SSL Encrypted
+                        </span>
+                    </div>
+
+                    <!-- Payment Service Options Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="payment-options-grid">
+                        
+                        <!-- Credit / Debit Card -->
+                        <label class="payment-option-card p-3.5 rounded-2xl border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 bg-white dark:bg-slate-800 text-center cursor-pointer transition-all duration-200 block select-none relative group" data-payment="card">
+                            <input type="radio" name="payment" value="card" class="hidden js-payment-radio">
+                            <div class="w-10 h-10 rounded-xl bg-red-600/10 text-red-600 mx-auto flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <span class="font-bold text-xs text-slate-900 dark:text-white block">Credit Card</span>
+                            <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">Visa, MC, Amex</span>
+                            <div class="js-active-indicator hidden absolute top-2 right-2 w-4 h-4 bg-red-600 text-white rounded-full flex items-center justify-center text-[9px]">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </label>
+
+                        <!-- PayPal -->
+                        <label class="payment-option-card p-3.5 rounded-2xl border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 bg-white dark:bg-slate-800 text-center cursor-pointer transition-all duration-200 block select-none relative group" data-payment="paypal">
+                            <input type="radio" name="payment" value="paypal" class="hidden js-payment-radio">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/10 text-blue-600 mx-auto flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-paypal"></i>
+                            </div>
+                            <span class="font-bold text-xs text-slate-900 dark:text-white block">PayPal</span>
+                            <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">Express Checkout</span>
+                            <div class="js-active-indicator hidden absolute top-2 right-2 w-4 h-4 bg-red-600 text-white rounded-full flex items-center justify-center text-[9px]">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </label>
+
+                        <!-- Trade Net-30 -->
+                        <label class="payment-option-card p-3.5 rounded-2xl border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 bg-white dark:bg-slate-800 text-center cursor-pointer transition-all duration-200 block select-none relative group" data-payment="invoice">
+                            <input type="radio" name="payment" value="invoice" class="hidden js-payment-radio">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-600/10 text-emerald-600 mx-auto flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <span class="font-bold text-xs text-slate-900 dark:text-white block">Trade Net-30</span>
+                            <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">Workshop Billing</span>
+                            <div class="js-active-indicator hidden absolute top-2 right-2 w-4 h-4 bg-red-600 text-white rounded-full flex items-center justify-center text-[9px]">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </label>
+
+                        <!-- Digital Wallet -->
+                        <label class="payment-option-card p-3.5 rounded-2xl border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 bg-white dark:bg-slate-800 text-center cursor-pointer transition-all duration-200 block select-none relative group" data-payment="wallet">
+                            <input type="radio" name="payment" value="wallet" class="hidden js-payment-radio">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900/10 dark:bg-white/10 text-slate-900 dark:text-white mx-auto flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-apple"></i>
+                            </div>
+                            <span class="font-bold text-xs text-slate-900 dark:text-white block">Digital Wallet</span>
+                            <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">Apple & Google Pay</span>
+                            <div class="js-active-indicator hidden absolute top-2 right-2 w-4 h-4 bg-red-600 text-white rounded-full flex items-center justify-center text-[9px]">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- No Selection Prompt Placeholder -->
+                    <div id="payment-placeholder-prompt" class="p-6 text-center rounded-2xl bg-slate-50/70 dark:bg-slate-900/40 border border-dashed border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 text-xs flex flex-col items-center justify-center gap-2">
+                        <div class="w-10 h-10 rounded-full bg-slate-200/80 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                            <i class="fa-solid fa-hand-pointer text-sm"></i>
+                        </div>
+                        <span class="font-semibold">Please select a payment method above to enter payment details</span>
+                    </div>
+
+                    <!-- Dynamic Payment Sub-Forms -->
+                    
+                    <!-- 1. Credit Card Form -->
+                    <div id="payment-form-card" class="payment-subform hidden p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-700 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Enter Card Credentials</span>
+                            <div class="flex items-center gap-2 text-slate-400 text-base">
+                                <i class="fa-brands fa-cc-visa text-blue-600 text-lg"></i>
+                                <i class="fa-brands fa-cc-mastercard text-red-500 text-lg"></i>
+                                <i class="fa-brands fa-cc-amex text-sky-500 text-lg"></i>
+                                <i class="fa-brands fa-cc-discover text-amber-500 text-lg"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Cardholder Name</label>
+                            <input type="text" id="card-name" value="Alex Morgan" placeholder="Name as on Card" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-red-600">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Card Number</label>
+                            <div class="relative">
+                                <input type="text" id="card-number" value="4532 8920 1938 4242" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 ps-10 text-xs font-mono font-bold focus:outline-none focus:ring-2 focus:ring-red-600">
+                                <i class="fa-solid fa-credit-card absolute left-3.5 top-3 text-slate-400 text-xs"></i>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Expiration Date</label>
+                                <input type="text" id="card-expiry" value="08/29" placeholder="MM/YY" maxlength="5" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 text-xs font-mono font-bold focus:outline-none focus:ring-2 focus:ring-red-600">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Security Code (CVV)</label>
+                                <div class="relative">
+                                    <input type="password" id="card-cvv" value="894" placeholder="CVC / CVV" maxlength="4" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 ps-10 text-xs font-mono font-bold focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <i class="fa-solid fa-shield-halved absolute left-3.5 top-3 text-slate-400 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2 pt-1 text-xs text-slate-600 dark:text-slate-400">
+                            <input type="checkbox" id="save-card-toggle" checked class="rounded text-red-600 focus:ring-red-600 w-4 h-4">
+                            <label for="save-card-toggle" class="cursor-pointer">Save payment details for 1-click workshop reorders</label>
+                        </div>
+                    </div>
+
+                    <!-- 2. PayPal Form -->
+                    <div id="payment-form-paypal" class="payment-subform hidden p-5 rounded-2xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-200/80 dark:border-blue-900/60 text-center space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl mx-auto shadow-md shadow-blue-600/30">
+                            <i class="fa-brands fa-paypal"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-slate-900 dark:text-white">Pay with PayPal Express</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 max-w-sm mx-auto">
+                                Instant checkout using your PayPal balance, linked bank account, or PayPal Pay in 4.
+                            </p>
+                        </div>
+                        <div class="p-3 bg-white dark:bg-slate-800 rounded-xl border border-blue-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-200 max-w-md mx-auto flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-user-check text-emerald-500"></i>
+                                <span>alex.morgan@workshop-solutions.com</span>
+                            </span>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2 py-0.5 rounded-full">Connected</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400">
+                            Click <strong>"Complete Order"</strong> below to securely authorize your purchase.
+                        </p>
+                    </div>
+
+                    <!-- 3. Trade Net-30 Invoice Form -->
+                    <div id="payment-form-invoice" class="payment-subform hidden p-5 rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200/80 dark:border-emerald-900/60 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-lg shadow-sm">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-black text-slate-900 dark:text-white">Workshop Trade Account Net-30</h4>
+                                <p class="text-[11px] text-emerald-700 dark:text-emerald-400">Commercial Credit Tier: <strong>$25,000 Approved Line</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Trade Account Number</label>
+                                <input type="text" id="trade-acc-num" value="WS-8942-DET" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 text-xs font-mono font-bold focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Purchase Order (PO) #</label>
+                                <input type="text" id="trade-po-num" value="PO-2026-0881" placeholder="Optional PO reference" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 text-xs font-mono font-bold focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                            </div>
+                        </div>
+
+                        <div class="text-[11px] text-slate-600 dark:text-slate-300 bg-white/80 dark:bg-slate-800/80 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800/60 leading-relaxed">
+                            <i class="fa-solid fa-circle-info text-emerald-600 me-1"></i>
+                            An electronic Net-30 commercial invoice with full itemized tax breakdown will be issued to your registered workshop email upon order dispatch. Payment is due within 30 calendar days.
+                        </div>
+                    </div>
+
+                    <!-- 4. Digital Wallet (Apple / Google Pay) -->
+                    <div id="payment-form-wallet" class="payment-subform hidden p-5 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-2xl mx-auto shadow-lg">
+                            <i class="fa-brands fa-apple"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-slate-900 dark:text-white">Apple Pay & Google Pay Express</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 max-w-sm mx-auto">
+                                Instant biometrically verified payment using your default Apple Wallet / Google Wallet card.
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-3.5 py-1.5 rounded-full text-xs font-bold">
+                            <i class="fa-solid fa-fingerprint"></i> Biometric Express Ready
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right: Order Summary Box -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl space-y-4">
+                    <h3 class="text-xl font-black text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-3">Order Items Review</h3>
+                    
+                    <div id="checkout-items-list" class="space-y-3 max-h-60 overflow-y-auto">
+                        <!-- Populated via JS -->
+                    </div>
+
+                    <div class="border-t border-slate-200 dark:border-slate-700 pt-4 space-y-2 text-xs">
+                        <div class="flex justify-between text-slate-600 dark:text-slate-400"><span>Items Subtotal:</span><span id="co-subtotal" class="font-bold">$0.00</span></div>
+                        <div class="flex justify-between text-slate-600 dark:text-slate-400"><span>Tax (8%):</span><span id="co-tax" class="font-bold">$0.00</span></div>
+                        <div class="flex justify-between text-slate-600 dark:text-slate-400"><span>Shipping:</span><span id="co-shipping" class="font-bold text-emerald-600">FREE</span></div>
+                        <div class="pt-2 border-t border-slate-200 dark:border-slate-700 flex justify-between text-lg font-black text-slate-900 dark:text-white">
+                            <span>Total Amount:</span>
+                            <span id="co-total" class="text-red-600 dark:text-red-400">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/30 transition-all">
+                        Complete Order & Generate Invoice
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                
+                <!-- Col 1: Store Intro -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-xl font-black">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div class="text-xl font-black tracking-tight text-white">
+                            AUTO<span class="text-red-600">PARTS</span> PRO
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        Premier catalog storefront for genuine OEM and high-performance aftermarket auto spare parts. Serving retail drivers, trade technicians, and commercial workshops worldwide.
+                    </p>
+                    <div class="flex items-center gap-2.5 pt-2 text-slate-400 text-sm">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="Follow us on X" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-slate-800 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-slate-600"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#dc2743]"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Subscribe on YouTube" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#FF0000]"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Connect on LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#0A66C2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#0A66C2]"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products Catalog</a></li>
+                        <li><a href="compatibility-finder.html" class="hover:text-white transition-colors">Compatibility Finder</a></li>
+                        <li><a href="brands.html" class="hover:text-white transition-colors">Brands Directory</a></li>
+                        <li><a href="bulk-pricing.html" class="hover:text-white transition-colors">Bulk Workshop Pricing</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Customer Care -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Policies & Help</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing & Policy</a></li>
+                        <li><a href="cart.html" class="hover:text-white transition-colors">Shopping Cart</a></li>
+                        <li><a href="account.html" class="hover:text-white transition-colors">Customer Account</a></li>
+                        <li><a href="login.html" class="hover:text-white transition-colors">Customer Login</a></li>
+                        <li><a href="404.html" class="hover:text-white transition-colors">404 Error Page</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-white transition-colors">Maintenance Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Store Info -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Warehouse Location</h4>
+                    <div class="space-y-3 text-xs text-slate-400">
+                        <div class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-red-500 mt-0.5"></i>
+                            <span>4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-red-500"></i>
+                            <span>+1 (800) 555-AUTO</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-red-500"></i>
+                            <span>parts@autopartspro.com</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-red-500"></i>
+                            <span>Mon–Fri: 7am – 7pm EST</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div>&copy; 2026 AutoParts Pro. All rights reserved. ThemeForest Ready Frontend HTML Template.</div>
+                <div class="flex items-center gap-4 text-lg text-slate-600">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Payment Selection Controller
+        function initPaymentSelection() {
+            const cards = document.querySelectorAll('.payment-option-card');
+            const subforms = document.querySelectorAll('.payment-subform');
+            const promptPlaceholder = document.getElementById('payment-placeholder-prompt');
+
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    const paymentType = this.getAttribute('data-payment');
+                    const radio = this.querySelector('.js-payment-radio');
+                    if (radio) radio.checked = true;
+
+                    // Hide placeholder prompt
+                    if (promptPlaceholder) {
+                        promptPlaceholder.classList.add('hidden');
+                    }
+
+                    // Update Card Visual States
+                    cards.forEach(c => {
+                        const check = c.querySelector('.js-active-indicator');
+                        c.className = 'payment-option-card p-3.5 rounded-2xl border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 bg-white dark:bg-slate-800 text-center cursor-pointer transition-all duration-200 block select-none relative group';
+                        if (check) check.classList.add('hidden');
+                    });
+
+                    this.className = 'payment-option-card p-3.5 rounded-2xl border-2 border-red-600 bg-red-50/70 dark:bg-red-950/30 ring-2 ring-red-600/30 text-center cursor-pointer transition-all duration-200 block select-none relative group shadow-md';
+                    const activeCheck = this.querySelector('.js-active-indicator');
+                    if (activeCheck) activeCheck.classList.remove('hidden');
+
+                    // Switch Subform
+                    subforms.forEach(sf => sf.classList.add('hidden'));
+                    const targetForm = document.getElementById(`payment-form-${paymentType}`);
+                    if (targetForm) {
+                        targetForm.classList.remove('hidden');
+                    }
+
+                    if (window.AutoPartsUI && window.AutoPartsUI.showToast) {
+                        const names = { card: 'Credit Card', paypal: 'PayPal Express', invoice: 'Trade Net-30', wallet: 'Digital Wallet' };
+                        window.AutoPartsUI.showToast(`Selected payment method: <strong>${names[paymentType] || paymentType}</strong>`, 'info');
+                    }
+                });
+            });
+
+            // Card Number Live Formatting
+            const cardNumInput = document.getElementById('card-number');
+            if (cardNumInput) {
+                cardNumInput.addEventListener('input', (e) => {
+                    let val = e.target.value.replace(/\D/g, '').substring(0, 16);
+                    let formatted = val.match(/.{1,4}/g)?.join(' ') || val;
+                    e.target.value = formatted;
+                });
+            }
+
+            // Expiry MM/YY Live Formatting
+            const cardExpInput = document.getElementById('card-expiry');
+            if (cardExpInput) {
+                cardExpInput.addEventListener('input', (e) => {
+                    let val = e.target.value.replace(/\D/g, '').substring(0, 4);
+                    if (val.length >= 2) {
+                        e.target.value = `${val.substring(0, 2)}/${val.substring(2)}`;
+                    } else {
+                        e.target.value = val;
+                    }
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPaymentSelection();
+
+            const container = document.getElementById('checkout-items-list');
+            const cart = window.AutoPartsStore.getCart();
+            const totals = window.AutoPartsStore.getCartTotals();
+
+            document.getElementById('co-subtotal').textContent = `$${totals.subtotal.toFixed(2)}`;
+            document.getElementById('co-tax').textContent = `$${totals.tax.toFixed(2)}`;
+            document.getElementById('co-shipping').textContent = totals.shipping === 0 ? 'FREE' : `$${totals.shipping.toFixed(2)}`;
+            document.getElementById('co-total').textContent = `$${totals.total.toFixed(2)}`;
+
+            if (container) {
+                if (cart.length === 0) {
+                    container.innerHTML = `
+                        <div class="text-center py-6 text-slate-400 text-xs">
+                            <i class="fa-solid fa-basket-shopping text-2xl mb-2 block"></i>
+                            <span>No items in cart</span>
+                        </div>
+                    `;
+                } else {
+                    container.innerHTML = cart.map(item => {
+                        const p = window.AutoPartsData.products.find(prod => prod.id === item.productId);
+                        if (!p) return '';
+                        return `
+                            <div class="flex items-center justify-between text-xs py-2 border-b border-slate-100 dark:border-slate-700/50">
+                                <div class="truncate max-w-[220px]">
+                                    <span class="font-bold text-slate-900 dark:text-white block truncate">${p.name}</span>
+                                    <div class="text-[10px] text-slate-400">Qty: ${item.quantity} x $${p.price.toFixed(2)}</div>
+                                </div>
+                                <span class="font-extrabold text-slate-900 dark:text-white">$${(p.price * item.quantity).toFixed(2)}</span>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            }
+        });
+
+        function handlePlaceOrder(e) {
+            e.preventDefault();
+            const totals = window.AutoPartsStore.getCartTotals();
+            const cart = window.AutoPartsStore.getCart();
+            if (cart.length === 0) {
+                AutoPartsUI.showToast('Your cart is empty! Please add parts before checking out.', 'warning');
+                return;
+            }
+
+            const selectedRadio = document.querySelector('input[name="payment"]:checked');
+            if (!selectedRadio) {
+                AutoPartsUI.showToast('Please select a payment method before placing your order.', 'warning');
+                const paymentSection = document.getElementById('payment-options-grid');
+                if (paymentSection) {
+                    paymentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    paymentSection.classList.add('ring-2', 'ring-amber-500', 'rounded-2xl', 'p-1.5', 'transition-all');
+                    setTimeout(() => {
+                        paymentSection.classList.remove('ring-2', 'ring-amber-500', 'rounded-2xl', 'p-1.5');
+                    }, 2000);
+                }
+                return;
+            }
+            const paymentType = selectedRadio.value;
+            
+            let paymentTitle = 'Credit Card';
+            if (paymentType === 'card') {
+                const cardNum = document.getElementById('card-number')?.value || '4242';
+                const last4 = cardNum.replace(/\s/g, '').slice(-4) || '4242';
+                paymentTitle = `Credit Card (•••• ${last4})`;
+            } else if (paymentType === 'paypal') {
+                paymentTitle = 'PayPal Express';
+            } else if (paymentType === 'invoice') {
+                const po = document.getElementById('trade-po-num')?.value || 'PO-NET30';
+                paymentTitle = `Trade Net-30 (${po})`;
+            } else if (paymentType === 'wallet') {
+                paymentTitle = 'Apple / Google Pay';
+            }
+
+            const order = window.AutoPartsStore.createOrder({
+                itemsCount: totals.itemsCount,
+                total: totals.total,
+                paymentMethod: paymentTitle,
+                address: document.getElementById('cust-address').value,
+                customerName: `${document.getElementById('cust-fname').value} ${document.getElementById('cust-lname').value}`,
+                customerEmail: document.getElementById('cust-email')?.value || 'alex.morgan@workshop-solutions.com',
+                items: cart.map(i => {
+                    const p = window.AutoPartsData.products.find(prod => prod.id === i.productId);
+                    return { name: p ? p.name : 'Spare Part', qty: i.quantity, price: p ? p.price : 0 };
+                })
+            });
+
+            window.location.href = `order-confirmation.html?id=${order.id}`;
+        }
+    </script>
+    <!-- SLIDE-IN CART DRAWER CONTAINER -->
+    <div id="cart-drawer-backdrop" onclick="AutoPartsUI.toggleCartDrawer(false)" class="hidden opacity-0 fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 transition-opacity duration-300"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-slate-900 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between border-s border-slate-200 dark:border-slate-800">
+        <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white text-base">
+                <i class="fa-solid fa-basket-shopping text-red-600"></i>
+                <span>Your Shopping Cart</span>
+                <span class="js-cart-count-badge bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+            </div>
+            <button type="button" onclick="AutoPartsUI.toggleCartDrawer(false)" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
+        <div class="p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 space-y-3">
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400">
+                <span>Subtotal:</span>
+                <span class="js-cart-subtotal-display font-bold text-slate-900 dark:text-white">$0.00</span>
+            </div>
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400">
+                <span>Estimated Shipping:</span>
+                <span class="text-emerald-600 font-semibold">Calculated at checkout</span>
+            </div>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-700 flex justify-between text-sm font-extrabold text-slate-900 dark:text-white">
+                <span>Total Amount:</span>
+                <span class="js-cart-subtotal-display text-red-600 dark:text-red-400">$0.00</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+                <a href="cart.html" onclick="AutoPartsUI.toggleCartDrawer(false)" class="py-3 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-800 dark:text-white text-center font-bold text-xs rounded-xl transition-colors">
+                    View Cart
+                </a>
+                <a href="checkout.html" onclick="AutoPartsUI.toggleCartDrawer(false)" class="py-3 bg-red-600 hover:bg-red-700 text-white text-center font-bold text-xs rounded-xl transition-colors shadow-lg shadow-red-600/30">
+                    Checkout Now
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- QUICK VIEW MODAL CONTAINER -->
+    <div id="quick-view-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-3xl w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <button type="button" onclick="AutoPartsUI.closeQuickView()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="quick-view-content"></div>
+        </div>
+    </div>
+
+    <!-- COMPARE MODAL CONTAINER -->
+    <div id="compare-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-4xl w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-2 text-lg font-black text-slate-900 dark:text-white">
+                    <i class="fa-solid fa-code-compare text-red-600"></i>
+                    <span>Product Specification Comparison</span>
+                </div>
+                <button type="button" onclick="AutoPartsUI.closeCompareModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="compare-modal-content"></div>
+        </div>
+    </div>
+</body>
+</html>

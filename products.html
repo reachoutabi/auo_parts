@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Spare Parts Catalog - AutoParts Pro Storefront</title>
+    <!-- Favicon / Browser Tab Save Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="Browse our complete catalog of brake components, engine parts, spark plugs, filters, electricals, radiators, and synthetic oils. Search by OEM number or vehicle make.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { red: '#DC2626', dark: '#0F172A', accent: '#2563EB', amber: '#D97706', slate: '#1E293B' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+
+
+                                            <!-- Main Navigation Header (Sticky) -->
+    <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
+        <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-2">
+            <div class="flex items-center justify-between gap-2 sm:gap-4">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
+                    <div class="w-8 sm:w-10 h-8 sm:h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-base sm:text-xl font-black group-hover:scale-105 transition-transform shadow-md shadow-red-600/30">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <div class="text-base sm:text-xl font-black tracking-tight text-white flex items-center gap-1 leading-tight">
+                            AUTO<span class="text-red-600">PARTS</span>
+                        </div>
+                        <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none">PRO STOREFRONT</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links (Visible on lg and up) -->
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-3 text-[11px] xl:text-xs font-semibold whitespace-nowrap flex-shrink-0">
+                    <!-- Home Dropdown Menu -->
+                    <div class="relative nav-dropdown-parent group py-1 cursor-pointer select-none whitespace-nowrap">
+                        <button type="button" class="flex items-center gap-1 text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap focus:outline-none">
+                            <span>Home</span>
+                            <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform duration-200"></i>
+                        </button>
+
+                        <!-- Dropdown Menu Content -->
+                        <div class="nav-dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-2xl rounded-2xl border border-slate-200 dark:border-slate-700 p-2.5 z-50 space-y-1.5 whitespace-normal">
+                            <!-- Home Page 1 -->
+                            <a href="index.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-red-600 transition-colors">Home Page 1</span>
+                                    <span class="text-[9px] bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 font-extrabold px-1.5 py-0.5 rounded">Retail</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">General Retail Landing</div>
+                            </a>
+
+                            <!-- Home Page 2 -->
+                            <a href="trade.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-amber-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-amber-500 transition-colors">Home Page 2</span>
+                                    <span class="text-[9px] bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-extrabold px-1.5 py-0.5 rounded">B2B Trade</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">Trade / Workshop Portal</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="products.html" class="text-red-500 font-bold border-b-2 border-red-500 pb-0.5 px-1 xl:px-1.5 rounded transition-colors whitespace-nowrap">Products</a>
+                    <a href="compatibility-finder.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Finder</a>
+                    <a href="brands.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Brands</a>
+                    <a href="bulk-pricing.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Bulk Pricing</a>
+                    <a href="about.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">About Us</a>
+                    <a href="blog.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Tech Blog</a>
+                    <a href="contact.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Contact</a>
+                </nav>
+
+                <!-- Header Actions (Compare, Wishlist, Theme, RTL, Auth, Cart, Mobile Menu) -->
+                <div class="flex items-center gap-1 sm:gap-1.5 xl:gap-2 flex-shrink-0">
+                    <!-- Compare Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.openCompareModal()" class="hidden sm:inline-flex relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Compare Products">
+                        <i class="fa-solid fa-code-compare text-sm sm:text-lg"></i>
+                        <span class="js-compare-count-badge hidden absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Wishlist Button -->
+                    <a href="account.html#wishlist" class="relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Wishlist">
+                        <i class="fa-solid fa-heart text-sm sm:text-lg"></i>
+                        <span class="js-wishlist-count-badge hidden absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </a>
+
+                    <!-- Theme Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleTheme()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-amber-400 transition-colors flex-shrink-0" title="Toggle Dark/Light Theme" aria-label="Toggle Dark/Light Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm sm:text-lg text-amber-400"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-sm sm:text-lg text-amber-400"></i>
+                    </button>
+
+                    <!-- RTL Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleRTL()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-blue-400 transition-colors flex-shrink-0" title="Toggle LTR/RTL Layout" aria-label="Toggle LTR/RTL Layout">
+                        <i class="fa-solid fa-right-left text-sm sm:text-lg text-blue-400"></i>
+                    </button>
+
+                    <!-- Login / Account Link -->
+                    <a href="login.html" class="js-auth-top-link hidden lg:inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Log In to your Account">
+                        <i class="fa-solid fa-right-to-bracket text-sm sm:text-lg"></i>
+                    </a>
+
+                    <!-- Cart Drawer Trigger Button (My Cart) -->
+                    <button type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
+                        <div class="relative">
+                            <i class="fa-solid fa-cart-shopping text-sm sm:text-base"></i>
+                            <span class="js-cart-count-badge hidden absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-slate-900">0</span>
+                        </div>
+                        <div class="hidden xl:block text-start">
+                            <div class="text-[9px] uppercase tracking-wider text-slate-400 leading-none">My Cart</div>
+                            <div class="js-cart-subtotal-display font-extrabold text-xs text-white">$0.00</div>
+                        </div>
+                    </button>
+
+                    <!-- Prominent Mobile Menu Hamburger Button (Always visible & accessible below lg) -->
+                    <button type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
+                        <i class="fa-solid fa-bars text-sm sm:text-base"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-wider hidden xs:inline">Menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Standardized Hero Section -->
+        <section class="page-hero">
+            <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,38,38,0.18),rgba(0,0,0,0))] pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div>
+                        <div class="text-xs text-slate-400 flex items-center gap-2 mb-2">
+                            <a href="index.html" class="hover:text-red-400 transition-colors">Home</a>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+                            <span class="text-red-500 font-semibold">Spare Parts Catalog</span>
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Auto Spare Parts Catalog</h1>
+                        <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl">Browse high-precision OEM and certified aftermarket replacement parts</p>
+                    </div>
+                    <a href="compatibility-finder.html" class="px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl flex items-center gap-2 transition-all shadow-md shadow-red-600/30 whitespace-nowrap">
+                        <i class="fa-solid fa-car"></i>
+                        <span>Filter by My Vehicle</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="py-6 sm:py-8 max-w-7xl mx-auto px-3 sm:px-4 w-full">
+
+        <!-- Quick Category Filter Pills (Relevant Auto Parts Categories) -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 text-xs font-semibold max-w-full no-scrollbar">
+            <span class="text-slate-400 text-[11px] font-bold uppercase me-2 whitespace-nowrap flex items-center gap-1.5">
+                <i class="fa-solid fa-layer-group text-red-500"></i> Categories:
+            </span>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 transition-colors whitespace-nowrap shadow-sm" data-category="">All Parts</button>
+            <button type="button" onclick="AutoPartsCatalog.toggleFlashSale()" class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 hover:bg-amber-500 hover:text-slate-950 transition-colors whitespace-nowrap flex items-center gap-1.5 font-bold">
+                <i class="fa-solid fa-bolt text-amber-500"></i> Flash Sale
+            </button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('brakes')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="brakes"><i class="fa-solid fa-circle-dot me-1"></i> Brakes</button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('engine')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="engine"><i class="fa-solid fa-gears me-1"></i> Engine Parts</button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('electrical')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="electrical"><i class="fa-solid fa-bolt me-1"></i> Electrical</button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('filters')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="filters"><i class="fa-solid fa-filter me-1"></i> Filters</button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('suspension')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="suspension"><i class="fa-solid fa-arrows-up-down me-1"></i> Suspension</button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('cooling')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="cooling"><i class="fa-solid fa-temperature-half me-1"></i> Cooling</button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('transmission')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="transmission"><i class="fa-solid fa-arrows-spin me-1"></i> Transmission</button>
+            <button type="button" onclick="AutoPartsCatalog.setCategory('fluids')" class="js-filter-category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-600 hover:text-white transition-colors whitespace-nowrap" data-category="fluids"><i class="fa-solid fa-oil-can me-1"></i> Oils & Fluids</button>
+        </div>
+
+        <!-- Mobile Filter Toggle Button -->
+        <div class="lg:hidden flex items-center justify-between bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-700 mb-6 shadow-sm w-full">
+            <button type="button" onclick="const s = document.getElementById('catalog-sidebar'); s.classList.toggle('hidden');" class="flex items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200 hover:text-red-600 transition-colors">
+                <i class="fa-solid fa-sliders text-red-600"></i>
+                <span>Toggle Categories & Filters</span>
+            </button>
+            <span class="text-[11px] font-semibold text-slate-400">Tap to filter</span>
+        </div>
+
+        <!-- Main Catalog Layout (Sidebar + Grid) -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 w-full max-w-full">
+            
+            <!-- Faceted Sidebar Filters -->
+            <aside id="catalog-sidebar" class="hidden lg:block lg:col-span-1 space-y-6">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700 space-y-6 shadow-sm">
+                    <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+                        <h3 class="font-black text-sm uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+                            <i class="fa-solid fa-filter text-red-600"></i> Filters
+                        </h3>
+                        <button type="button" onclick="AutoPartsCatalog.resetAllFilters()" class="text-xs text-red-600 hover:underline font-semibold">Reset</button>
+                    </div>
+
+                    <!-- Search Input -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Search Catalog</label>
+                        <input type="text" id="catalog-search-input" placeholder="Part name, SKU, OEM..." class="w-full bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-red-600 focus:outline-none">
+                    </div>
+
+                    <!-- Special Deals / Flash Sale Filter Container -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Special Offers</label>
+                        <div id="catalog-flashsale-container" class="flex items-center justify-between p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 hover:border-amber-500 hover:bg-amber-500/15 transition-all cursor-pointer select-none" onclick="AutoPartsCatalog.toggleFlashSale()">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-6 h-6 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center text-xs font-black">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-900 dark:text-white leading-tight">Flash Sale</div>
+                                    <div class="text-[10px] text-amber-600 dark:text-amber-400 font-semibold leading-tight">Clearance Deals</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span id="catalog-flashsale-count" class="text-[10px] font-extrabold bg-amber-500/20 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-md">3</span>
+                                <input type="checkbox" id="catalog-flashsale-checkbox" onclick="event.stopPropagation(); AutoPartsCatalog.toggleFlashSale(this.checked)" class="w-4 h-4 rounded accent-red-600 cursor-pointer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Part Category Filters -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Part Categories</label>
+                        <div class="space-y-1 text-xs">
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('brakes')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="brakes">
+                                <span>Brake Components</span> <span class="text-[10px] font-bold opacity-70" data-category-count="brakes">2</span>
+                            </button>
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('engine')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="engine">
+                                <span>Engine Parts</span> <span class="text-[10px] font-bold opacity-70" data-category-count="engine">3</span>
+                            </button>
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('electrical')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="electrical">
+                                <span>Electrical & Lighting</span> <span class="text-[10px] font-bold opacity-70" data-category-count="electrical">2</span>
+                            </button>
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('filters')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="filters">
+                                <span>Filters (Oil, Air, Cabin)</span> <span class="text-[10px] font-bold opacity-70" data-category-count="filters">1</span>
+                            </button>
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('suspension')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="suspension">
+                                <span>Suspension & Steering</span> <span class="text-[10px] font-bold opacity-70" data-category-count="suspension">1</span>
+                            </button>
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('cooling')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="cooling">
+                                <span>Cooling System</span> <span class="text-[10px] font-bold opacity-70" data-category-count="cooling">1</span>
+                            </button>
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('transmission')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="transmission">
+                                <span>Transmission & Drivetrain</span> <span class="text-[10px] font-bold opacity-70" data-category-count="transmission">1</span>
+                            </button>
+                            <button type="button" onclick="AutoPartsCatalog.setCategory('fluids')" class="js-filter-category-btn w-full text-start px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors flex items-center justify-between" data-category="fluids">
+                                <span>Oils & Lubricants</span> <span class="text-[10px] font-bold opacity-70" data-category-count="fluids">1</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Manufacturer Brands Filter -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Manufacturer Brands</label>
+                        <div class="grid grid-cols-2 gap-1.5 text-xs">
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('bosch')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="bosch">Bosch</button>
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('brembo')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="brembo">Brembo</button>
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('denso')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="denso">Denso</button>
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('ngk')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="ngk">NGK</button>
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('bilstein')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="bilstein">Bilstein</button>
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('volta')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="volta">Volta</button>
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('mahle')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="mahle">Mahle</button>
+                            <button type="button" onclick="AutoPartsCatalog.setBrand('valeo')" class="js-filter-brand-btn text-start px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700/60 hover:bg-red-600 hover:text-white transition-colors font-semibold truncate" data-brand="valeo">Valeo</button>
+                        </div>
+                    </div>
+
+                    <!-- Price Slider -->
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                            <span>Max Price</span>
+                            <span id="catalog-price-display" class="text-red-600 font-extrabold">$1000</span>
+                        </div>
+                        <input type="range" id="catalog-price-range" min="10" max="1000" step="10" value="1000" class="w-full accent-red-600">
+                    </div>
+
+                    <!-- Availability Toggle -->
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-200 dark:border-slate-700">
+                        <input type="checkbox" id="catalog-instock-checkbox" class="w-4 h-4 rounded">
+                        <label for="catalog-instock-checkbox" class="text-xs font-semibold text-slate-700 dark:text-slate-300">In Stock Only</label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid Content -->
+            <div class="lg:col-span-3 space-y-6">
+                
+                <!-- View Bar Controls -->
+                <div class="bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 shadow-sm w-full">
+                    <div id="catalog-results-count" class="text-xs font-bold text-slate-600 dark:text-slate-400">
+                        Showing results...
+                    </div>
+                    
+                    <div class="flex flex-wrap items-center justify-between sm:justify-end gap-2 sm:gap-4 w-full sm:w-auto">
+                        <!-- Sort Dropdown -->
+                        <div class="flex items-center gap-2">
+                            <span class="text-[11px] sm:text-xs font-semibold text-slate-400">Sort:</span>
+                            <select id="catalog-sort-select" class="bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-2.5 py-1.5 text-xs font-bold focus:outline-none max-w-[170px] sm:max-w-none">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="name">Product Name (A-Z)</option>
+                            </select>
+                        </div>
+
+                        <!-- Layout Toggles -->
+                        <div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-700 p-1 rounded-xl">
+                            <button type="button" id="btn-view-grid" class="p-1.5 rounded-lg bg-red-600 text-white transition-colors" title="Grid View">
+                                <i class="fa-solid fa-grip text-xs"></i>
+                            </button>
+                            <button type="button" id="btn-view-list" class="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:text-red-600 transition-colors" title="List View">
+                                <i class="fa-solid fa-list text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid Container -->
+                <div id="catalog-products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 justify-center justify-items-center w-full max-w-full">
+                    <!-- Rendered dynamically via catalog.js -->
+                </div>
+
+                <!-- Dynamic Pagination Container -->
+                <div id="catalog-pagination-container">
+                    <!-- Populated dynamically via catalog.js -->
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                
+                <!-- Col 1: Store Intro -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-xl font-black">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div class="text-xl font-black tracking-tight text-white">
+                            AUTO<span class="text-red-600">PARTS</span> PRO
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        Premier catalog storefront for genuine OEM and high-performance aftermarket auto spare parts. Serving retail drivers, trade technicians, and commercial workshops worldwide.
+                    </p>
+                    <div class="flex items-center gap-2.5 pt-2 text-slate-400 text-sm">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="Follow us on X" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-slate-800 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-slate-600"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#dc2743]"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Subscribe on YouTube" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#FF0000]"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Connect on LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#0A66C2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#0A66C2]"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products Catalog</a></li>
+                        <li><a href="compatibility-finder.html" class="hover:text-white transition-colors">Compatibility Finder</a></li>
+                        <li><a href="brands.html" class="hover:text-white transition-colors">Brands Directory</a></li>
+                        <li><a href="bulk-pricing.html" class="hover:text-white transition-colors">Bulk Workshop Pricing</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Customer Care -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Policies & Help</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing & Policy</a></li>
+                        <li><a href="cart.html" class="hover:text-white transition-colors">Shopping Cart</a></li>
+                        <li><a href="account.html" class="hover:text-white transition-colors">Customer Account</a></li>
+                        <li><a href="login.html" class="hover:text-white transition-colors">Customer Login</a></li>
+                        <li><a href="404.html" class="hover:text-white transition-colors">404 Error Page</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-white transition-colors">Maintenance Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Store Info -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Warehouse Location</h4>
+                    <div class="space-y-3 text-xs text-slate-400">
+                        <div class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-red-500 mt-0.5"></i>
+                            <span>4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-red-500"></i>
+                            <span>+1 (800) 555-AUTO</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-red-500"></i>
+                            <span>parts@autopartspro.com</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-red-500"></i>
+                            <span>Mon–Fri: 7am – 7pm EST</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div>&copy; 2026 AutoParts Pro. All rights reserved. ThemeForest Ready Frontend HTML Template.</div>
+                <div class="flex items-center gap-4 text-lg text-slate-600">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-IN CART DRAWER & MODALS -->
+    <div id="cart-drawer-backdrop" onclick="AutoPartsUI.toggleCartDrawer(false)" class="hidden opacity-0 fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 transition-opacity"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-slate-900 shadow-2xl z-50 transform translate-x-full transition-transform flex flex-col justify-between border-s border-slate-200 dark:border-slate-800">
+        <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <div class="font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <i class="fa-solid fa-basket-shopping text-red-600"></i> Shopping Cart
+            </div>
+            <button type="button" onclick="AutoPartsUI.toggleCartDrawer(false)"><i class="fa-solid fa-xmark text-lg"></i></button>
+        </div>
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
+        <div class="p-5 border-t border-slate-200 dark:border-slate-800 space-y-3">
+            <div class="flex justify-between text-xs"><span>Subtotal:</span><span class="js-cart-subtotal-display font-bold">$0.00</span></div>
+            <a href="checkout.html" class="block py-3 bg-red-600 text-white text-center font-bold text-xs rounded-xl">Checkout Now</a>
+        </div>
+    </aside>
+
+    <div id="quick-view-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-3xl w-full p-6 relative shadow-2xl">
+            <button type="button" onclick="AutoPartsUI.closeQuickView()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            <div id="quick-view-content"></div>
+        </div>
+    </div>
+
+    <div id="compare-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-4xl w-full p-6 relative shadow-2xl">
+            <button type="button" onclick="AutoPartsUI.closeCompareModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            <div id="compare-modal-content"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/compatibility-finder.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/catalog.js"></script>
+</body>
+</html>

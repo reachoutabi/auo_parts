@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoParts Pro - The Right Part. The First Time. | Genuine & Aftermarket Auto Parts</title>
+    <!-- Favicon / Browser Tab Save Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="Shop genuine and aftermarket auto spare parts, matched to your exact vehicle, with workshop-grade bulk pricing for trade buyers. Fast dispatch and guaranteed fitment.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#DC2626',
+                            dark: '#0F172A',
+                            accent: '#2563EB',
+                            amber: '#D97706',
+                            slate: '#1E293B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-red-600 selection:text-white">
+
+
+                                            <!-- Main Navigation Header (Sticky) -->
+    <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
+        <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-2">
+            <div class="flex items-center justify-between gap-2 sm:gap-4">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
+                    <div class="w-8 sm:w-10 h-8 sm:h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-base sm:text-xl font-black group-hover:scale-105 transition-transform shadow-md shadow-red-600/30">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <div class="text-base sm:text-xl font-black tracking-tight text-white flex items-center gap-1 leading-tight">
+                            AUTO<span class="text-red-600">PARTS</span>
+                        </div>
+                        <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none">PRO STOREFRONT</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links (Visible on lg and up) -->
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-3 text-[11px] xl:text-xs font-semibold whitespace-nowrap flex-shrink-0">
+                    <!-- Home Dropdown Menu -->
+                    <div class="relative nav-dropdown-parent group py-1 cursor-pointer select-none whitespace-nowrap">
+                        <button type="button" class="flex items-center gap-1 font-bold text-red-500 border-b-2 border-red-500 pb-0.5 px-1 xl:px-1.5 focus:outline-none whitespace-nowrap">
+                            <span>Home</span>
+                            <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform duration-200"></i>
+                        </button>
+
+                        <!-- Dropdown Menu Content -->
+                        <div class="nav-dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-2xl rounded-2xl border border-slate-200 dark:border-slate-700 p-2.5 z-50 space-y-1.5 whitespace-normal">
+                            <!-- Home Page 1 -->
+                            <a href="index.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-red-600 transition-colors">Home Page 1</span>
+                                    <span class="text-[9px] bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 font-extrabold px-1.5 py-0.5 rounded">Retail</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">General Retail Landing</div>
+                            </a>
+
+                            <!-- Home Page 2 -->
+                            <a href="trade.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-amber-500/30 group/item">
+                                <div class="flex items-center justify-between gap-1 mb-0.5">
+                                    <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-amber-500 transition-colors">Home Page 2</span>
+                                    <span class="text-[9px] bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-extrabold px-1.5 py-0.5 rounded">B2B Trade</span>
+                                </div>
+                                <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200">Trade / Workshop Portal</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="products.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Products</a>
+                    <a href="compatibility-finder.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Finder</a>
+                    <a href="brands.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Brands</a>
+                    <a href="bulk-pricing.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Bulk Pricing</a>
+                    <a href="about.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">About Us</a>
+                    <a href="blog.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Tech Blog</a>
+                    <a href="contact.html" class="text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap">Contact</a>
+                </nav>
+
+                <!-- Header Actions (Compare, Wishlist, Theme, RTL, Auth, Cart, Mobile Menu) -->
+                <div class="flex items-center gap-1 sm:gap-1.5 xl:gap-2 flex-shrink-0">
+                    <!-- Compare Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.openCompareModal()" class="hidden sm:inline-flex relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Compare Products">
+                        <i class="fa-solid fa-code-compare text-sm sm:text-lg"></i>
+                        <span class="js-compare-count-badge hidden absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Wishlist Button -->
+                    <a href="account.html#wishlist" class="relative p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Wishlist">
+                        <i class="fa-solid fa-heart text-sm sm:text-lg"></i>
+                        <span class="js-wishlist-count-badge hidden absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </a>
+
+                    <!-- Theme Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleTheme()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-amber-400 transition-colors flex-shrink-0" title="Toggle Dark/Light Theme" aria-label="Toggle Dark/Light Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm sm:text-lg text-amber-400"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-sm sm:text-lg text-amber-400"></i>
+                    </button>
+
+                    <!-- RTL Switcher Button (Visible sm and up) -->
+                    <button type="button" onclick="AutoPartsUI.toggleRTL()" class="inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-blue-400 transition-colors flex-shrink-0" title="Toggle LTR/RTL Layout" aria-label="Toggle LTR/RTL Layout">
+                        <i class="fa-solid fa-right-left text-sm sm:text-lg text-blue-400"></i>
+                    </button>
+
+                    <!-- Login / Account Link -->
+                    <a href="login.html" class="js-auth-top-link hidden lg:inline-flex p-1.5 sm:p-2 text-slate-300 hover:text-red-400 transition-colors flex-shrink-0" title="Log In to your Account">
+                        <i class="fa-solid fa-right-to-bracket text-sm sm:text-lg"></i>
+                    </a>
+
+                    <!-- Cart Drawer Trigger Button (My Cart) -->
+                    <button type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
+                        <div class="relative">
+                            <i class="fa-solid fa-cart-shopping text-sm sm:text-base"></i>
+                            <span class="js-cart-count-badge hidden absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-slate-900">0</span>
+                        </div>
+                        <div class="hidden xl:block text-start">
+                            <div class="text-[9px] uppercase tracking-wider text-slate-400 leading-none">My Cart</div>
+                            <div class="js-cart-subtotal-display font-extrabold text-xs text-white">$0.00</div>
+                        </div>
+                    </button>
+
+                    <!-- Prominent Mobile Menu Hamburger Button (Always visible & accessible below lg) -->
+                    <button type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
+                        <i class="fa-solid fa-bars text-sm sm:text-base"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-wider hidden xs:inline">Menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1">
+
+        <!-- 1. Hero Section with Vehicle Selector Widget -->
+        <section class="relative bg-slate-900 text-white py-12 md:py-20 overflow-hidden">
+            <!-- Background Decorative Glow & Technical Grid Overlay -->
+            <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,38,38,0.22),rgba(255,255,255,0))] pointer-events-none"></div>
+            <div class="absolute inset-0 z-0 opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/40 text-red-400 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-certificate"></i> Verified Automotive Parts Storefront
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                            The Right Part. <br><span class="text-red-600">The First Time.</span>
+                        </h1>
+                        
+                        <p class="text-slate-300 text-sm sm:text-base max-w-xl leading-relaxed">
+                            Genuine and aftermarket auto parts, matched to your exact vehicle, with workshop-grade bulk pricing for trade buyers.
+                        </p>
+
+                        <!-- Trust Highlights -->
+                        <div class="flex flex-wrap items-center gap-6 pt-2">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-200">100% Guaranteed Fitment</div>
+                                    <div class="text-[10px] text-slate-400">Zero-risk return policy</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-boxes-packing"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-200">50,000+ SKUs Stocked</div>
+                                    <div class="text-[10px] text-slate-400">OEM & premium aftermarket</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-200">Same-Day Dispatch</div>
+                                    <div class="text-[10px] text-slate-400">Orders before 3 PM EST</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Selector Widget Card -->
+                    <div class="lg:col-span-5 bg-white dark:bg-slate-800 text-slate-900 dark:text-white p-6 sm:p-8 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-11 h-11 bg-red-600 text-white rounded-xl flex items-center justify-center text-xl font-bold shadow-md shadow-red-600/30">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-black leading-tight">Find Parts For Your Car</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Select Make, Model, Year & Engine</p>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Cascading Vehicle Form -->
+                        <form class="js-vehicle-selector-form space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">1. Car Manufacturer (Make)</label>
+                                <select class="js-make-select w-full bg-slate-100 dark:bg-slate-700/80 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-red-600 focus:outline-none">
+                                    <!-- Populated via JS -->
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">2. Vehicle Model</label>
+                                <select class="js-model-select w-full bg-slate-100 dark:bg-slate-700/80 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-red-600 focus:outline-none" disabled>
+                                    <option value="">Select Make First</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">3. Year</label>
+                                    <select class="js-year-select w-full bg-slate-100 dark:bg-slate-700/80 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-red-600 focus:outline-none" disabled>
+                                        <option value="">Select Model First</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">4. Engine Variant</label>
+                                    <select class="js-engine-select w-full bg-slate-100 dark:bg-slate-700/80 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-2.5 text-xs font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-red-600 focus:outline-none" disabled>
+                                        <option value="">Engine (Optional)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="js-search-vehicle-btn w-full py-3.5 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/30 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span>Find Compatible Parts</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Top-Selling Parts Carousel Slider Section -->
+        <section class="py-14 bg-white dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-700">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                    <div>
+                        <div class="text-xs font-bold text-red-600 uppercase tracking-widest mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-fire text-amber-500"></i> High-Demand Components
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Top-Selling Auto Parts</h2>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Direct from global Tier-1 OEM manufacturers with verified fitment guarantees</p>
+                    </div>
+                    
+                    <!-- Carousel Navigation Controls -->
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="AutoPartsUI.scrollCarousel('left')" class="carousel-nav-btn w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-red-600 hover:text-white text-slate-700 dark:text-slate-200 flex items-center justify-center transition-all border border-slate-200 dark:border-slate-600 shadow-sm" aria-label="Previous Slide">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button type="button" onclick="AutoPartsUI.scrollCarousel('right')" class="carousel-nav-btn w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-red-600 hover:text-white text-slate-700 dark:text-slate-200 flex items-center justify-center transition-all border border-slate-200 dark:border-slate-600 shadow-sm" aria-label="Next Slide">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+                        <a href="products.html" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 bg-slate-900 dark:bg-slate-700 hover:bg-red-600 text-white rounded-xl text-xs font-bold transition-all shadow-sm ms-2">
+                            <span>View All (25+)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Carousel Track Container -->
+                <div id="home-carousel-track" class="carousel-track-container flex gap-6 pb-4 pt-1 overflow-x-auto scroll-smooth">
+                    <!-- Populated dynamically via JS with top products -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Shop by Category (Engine, Brakes, Electrical, Body, Interior, Suspension, Cooling, Filters) -->
+        <section class="py-16 max-w-7xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-1">Precision Vehicle Systems</div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Shop by Category</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Explore replacement parts, overhaul kits, and upgrades across all 8 essential vehicle systems</p>
+                </div>
+                <a href="products.html" class="text-xs font-bold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1 self-start sm:self-auto">
+                    View Complete Catalog <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+                <!-- 1. Engine Parts -->
+                <a href="products.html?category=engine" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/spark-plugs.jpg" alt="Engine Components & Turbo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">3 SKUs</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Engine</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Ignition, turbos & pistons</p>
+                    </div>
+                </a>
+
+                <!-- 2. Brakes -->
+                <a href="products.html?category=brakes" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/brake-rotors.jpg" alt="Brake Rotors and Pads" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-circle-dot"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">2 SKUs</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Brakes</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Rotors, ceramic pads & calipers</p>
+                    </div>
+                </a>
+
+                <!-- 3. Electrical -->
+                <a href="products.html?category=electrical" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/alternator.jpg" alt="Electrical and Lighting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">2 SKUs</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Electrical</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Alternators, starters & sensors</p>
+                    </div>
+                </a>
+
+                <!-- 4. Body & Panels -->
+                <a href="products.html?category=body" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/body-parts.jpg" alt="Body Panels and Mirrors" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">OEM</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Body</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Mirrors, grilles & trim</p>
+                    </div>
+                </a>
+
+                <!-- 5. Interior Accessories -->
+                <a href="products.html?category=interior" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/interior-parts.jpg" alt="Interior Accessories" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-chair"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">Accessories</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Interior</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Steering, pedals & trim</p>
+                    </div>
+                </a>
+
+                <!-- 6. Suspension -->
+                <a href="products.html?category=suspension" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/suspension.jpg" alt="Suspension and Steering" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-purple-600 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">1 SKU</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Suspension</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Bilstein struts & bushings</p>
+                    </div>
+                </a>
+
+                <!-- 7. Cooling System -->
+                <a href="products.html?category=cooling" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/radiator.jpg" alt="Cooling Radiators and Pumps" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-cyan-600 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-temperature-arrow-down"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">1 SKU</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Cooling</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Radiators, pumps & thermostats</p>
+                    </div>
+                </a>
+
+                <!-- 8. Filters -->
+                <a href="products.html?category=filters" class="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/90 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-36 w-full overflow-hidden relative bg-slate-900">
+                        <img src="assets/images/parts/filters.jpg" alt="Oil and Air Filters" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-2.5 left-2.5 w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-sm shadow-md">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <span class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/10">1 SKU</span>
+                    </div>
+                    <div class="p-3.5">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">Filters</h3>
+                        <p class="text-[11px] text-slate-400 font-medium mt-0.5 line-clamp-1">Oil, air, fuel & cabin filters</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. Brand Banners & Supported Manufacturers -->
+        <section class="py-14 bg-slate-100 dark:bg-slate-800/40 border-y border-slate-200 dark:border-slate-700/80">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-1">Direct Factory Partnerships</h3>
+                        <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Stocked Direct from Global Tier-1 Manufacturers</h2>
+                    </div>
+                    <a href="brands.html" class="text-xs font-bold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1 self-start sm:self-auto">
+                        All Brands Directory <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 items-stretch">
+                    <!-- Bosch -->
+                    <a href="brands.html#bosch" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/alternator.jpg" alt="Bosch Parts" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">BOSCH</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">Germany</span>
+                        </div>
+                    </a>
+
+                    <!-- Brembo -->
+                    <a href="brands.html#brembo" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/brake-rotors.jpg" alt="Brembo Brakes" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">BREMBO</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">Italy</span>
+                        </div>
+                    </a>
+
+                    <!-- Denso -->
+                    <a href="brands.html#denso" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/radiator.jpg" alt="Denso OE Parts" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">DENSO</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">Japan</span>
+                        </div>
+                    </a>
+
+                    <!-- NGK -->
+                    <a href="brands.html#ngk" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/spark-plugs.jpg" alt="NGK Spark Plugs" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">NGK</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">Japan</span>
+                        </div>
+                    </a>
+
+                    <!-- Bilstein -->
+                    <a href="brands.html#bilstein" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/suspension.jpg" alt="Bilstein Suspension" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">BILSTEIN</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">Germany</span>
+                        </div>
+                    </a>
+
+                    <!-- Volta -->
+                    <a href="brands.html#volta" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/motor-oil.jpg" alt="Volta Motor Oils" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">VOLTA</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">USA</span>
+                        </div>
+                    </a>
+
+                    <!-- Mahle -->
+                    <a href="brands.html#mahle" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/filters.jpg" alt="Mahle Original" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">MAHLE</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">Germany</span>
+                        </div>
+                    </a>
+
+                    <!-- Valeo -->
+                    <a href="brands.html#valeo" class="group bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center text-center justify-between">
+                        <div class="w-full h-16 rounded-xl overflow-hidden mb-2 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center p-1">
+                            <img src="assets/images/parts/headlight.jpg" alt="Valeo Automotive" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform">
+                        </div>
+                        <div>
+                            <div class="font-black text-xs text-slate-900 dark:text-white group-hover:text-red-600 transition-colors">VALEO</div>
+                            <span class="text-[9px] text-slate-400 font-semibold block">France</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Hot Deals & Clearance Strip -->
+        <section class="py-12 bg-gradient-to-r from-red-700 via-red-800 to-slate-950 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
+                <div class="space-y-2 text-center lg:text-start">
+                    <span class="bg-amber-400 text-slate-950 font-black text-[10px] uppercase px-3 py-1 rounded-md tracking-wider shadow-sm">Flash Clearance Event</span>
+                    <h3 class="text-2xl sm:text-3xl font-black">Up to 35% Off OEM Service Filter Bundles & Rotors</h3>
+                    <p class="text-red-100 text-xs sm:text-sm max-w-xl">Stock up on premium Bosch, NGK, and Mahle oil & air filtration kits before inventory expires.</p>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                    <div class="text-center bg-black/40 backdrop-blur-md p-3 rounded-xl min-w-[60px] sm:min-w-[64px] border border-white/10 shadow-md">
+                        <span id="clearance-days" class="block text-xl sm:text-2xl font-black font-mono">02</span>
+                        <span class="text-[9px] uppercase tracking-widest text-red-200">Days</span>
+                    </div>
+                    <div class="text-center bg-black/40 backdrop-blur-md p-3 rounded-xl min-w-[60px] sm:min-w-[64px] border border-white/10 shadow-md">
+                        <span id="clearance-hours" class="block text-xl sm:text-2xl font-black font-mono">14</span>
+                        <span class="text-[9px] uppercase tracking-widest text-red-200">Hours</span>
+                    </div>
+                    <div class="text-center bg-black/40 backdrop-blur-md p-3 rounded-xl min-w-[60px] sm:min-w-[64px] border border-white/10 shadow-md">
+                        <span id="clearance-mins" class="block text-xl sm:text-2xl font-black font-mono">45</span>
+                        <span class="text-[9px] uppercase tracking-widest text-red-200">Mins</span>
+                    </div>
+                    <div class="text-center bg-black/40 backdrop-blur-md p-3 rounded-xl min-w-[60px] sm:min-w-[64px] border border-white/10 shadow-md">
+                        <span id="clearance-secs" class="block text-xl sm:text-2xl font-black font-mono text-amber-300">30</span>
+                        <span class="text-[9px] uppercase tracking-widest text-red-200">Secs</span>
+                    </div>
+                    <a href="products.html?deal=true" class="shop-sale-parts-btn group ms-0 sm:ms-2 px-6 py-3.5 sm:py-4 bg-white text-red-700 hover:bg-slate-900 hover:text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:-translate-y-0.5 active:scale-95 flex items-center gap-2 border-2 border-transparent hover:border-white/20 cursor-pointer">
+                        <span>Shop Sale Parts</span>
+                        <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1.5 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Why Buy From Us (Genuine parts, warranty, fast dispatch, workshop pricing) -->
+        <section class="py-16 max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-red-600 uppercase tracking-widest">The AutoParts Pro Advantage</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight mt-1">Why Buy Spare Parts From Us?</h2>
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">Built for discerning car owners, enthusiast builders, and certified automotive workshops</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1. Genuine Parts -->
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-red-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-red-600/10 dark:bg-red-600/20 text-red-600 dark:text-red-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-2">100% Genuine & OEM</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Direct-sourced from authorized European, Japanese, and American automotive parts factories. Guaranteed authentic with serial tracking.
+                    </p>
+                </div>
+
+                <!-- 2. Warranty & Guaranteed Fitment -->
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-red-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 dark:bg-blue-600/20 text-blue-600 dark:text-blue-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-2">2-Year Full Warranty</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Every component is covered with a comprehensive 24-month warranty and 100% exact fitment money-back guarantee.
+                    </p>
+                </div>
+
+                <!-- 3. Fast Dispatch -->
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-red-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-600/10 dark:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-2">Fast 24h Dispatch</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Packed with protective foam and dispatched from our Detroit Central Logistics Hub within 24 hours of checkout.
+                    </p>
+                </div>
+
+                <!-- 4. Workshop Pricing -->
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-red-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600/10 dark:bg-amber-600/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-2">Workshop Tier Pricing</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Transparent volume pricing for retail drivers buying full service kits and workshops needing bulk maintenance parts.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Compatibility Finder CTA Banner -->
+        <section class="py-10 max-w-7xl mx-auto px-4">
+            <div class="bg-gradient-to-r from-blue-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-blue-800/40 shadow-2xl">
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl pointer-events-none">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-8 space-y-3">
+                        <span class="inline-flex items-center gap-1.5 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-md">
+                            <i class="fa-solid fa-microchip"></i> Smart Fitment Engine
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-black">Not Sure Which Part Number Matches Your Vehicle?</h2>
+                        <p class="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
+                            Use our AI-assisted Compatibility Finder to cross-reference VINs, OEM supersessions, engine codes, and chassis generation numbers in seconds.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+                        <a href="compatibility-finder.html" class="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Launch Compatibility Finder</span>
+                        </a>
+                        <a href="products.html" class="px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs uppercase tracking-wider rounded-xl transition-all text-center border border-slate-700">
+                            <span>Browse by Vehicle Type</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Bulk / Workshop Pricing CTA Banner -->
+        <section class="py-10 max-w-7xl mx-auto px-4">
+            <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 border border-slate-800 shadow-2xl">
+                <div class="space-y-4 max-w-xl z-10">
+                    <span class="bg-red-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-md">Trade & Workshop Accounts</span>
+                    <h2 class="text-2xl sm:text-3xl font-black">Are You an Independent Repair Shop or Fleet Operator?</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Unlock up to 35% off retail prices, dedicated account managers, net-30 invoicing, and priority warehouse dispatch for bulk consumable orders.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="trade.html" class="px-6 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-toolbox"></i>
+                            <span>Open B2B Trade Portal</span>
+                        </a>
+                        <a href="bulk-pricing.html" class="px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors border border-slate-700">
+                            <span>View Wholesale Matrix</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-96 bg-slate-800/90 p-6 rounded-2xl border border-slate-700 z-10">
+                    <h4 class="font-bold text-sm mb-3 flex items-center gap-2 text-white">
+                        <i class="fa-solid fa-layer-group text-red-500"></i> Wholesale Tier Discount Matrix
+                    </h4>
+                    <div class="space-y-2.5 text-xs">
+                        <div class="flex justify-between py-1.5 border-b border-slate-700">
+                            <span class="text-slate-400">1 – 4 Units (Retail)</span>
+                            <span class="font-bold text-white">Standard MSRP</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-slate-700">
+                            <span class="text-slate-400">5 – 19 Units (Trade Tier 1)</span>
+                            <span class="font-bold text-emerald-400">15% Discount</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-slate-700">
+                            <span class="text-slate-400">20 – 49 Units (Workshop Tier 2)</span>
+                            <span class="font-bold text-emerald-400">25% Discount</span>
+                        </div>
+                        <div class="flex justify-between py-1.5">
+                            <span class="text-slate-400">50+ Units (Fleet Wholesale)</span>
+                            <span class="font-bold text-emerald-400">35% Discount</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Customer Testimonials -->
+        <section class="py-16 bg-white dark:bg-slate-800/40 border-y border-slate-200 dark:border-slate-700/80">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-red-600 uppercase tracking-widest">Verified Buyer Reviews</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight mt-1">What Car Owners & Drivers Say</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Real feedback from drivers who found the exact parts they needed</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Review 1 -->
+                    <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 text-[11px] font-bold ms-1">5.0</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 italic leading-relaxed mb-4">
+                                "The vehicle selector saved me hours. Bought a pair of Brembo High-Carbon rotors for my 2021 BMW M340i. Fitment was flawless out of the box, zero brake squeal."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700">
+                            <img src="assets/images/avatars/marcus.jpg" alt="Marcus L." class="w-10 h-10 rounded-full object-cover border-2 border-red-600/60 shadow-md flex-shrink-0">
+                            <div>
+                                <div class="font-bold text-xs text-slate-900 dark:text-white">Marcus L.</div>
+                                <div class="text-[10px] text-slate-400">2021 BMW M340i Owner &bull; Verified Purchase</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 text-[11px] font-bold ms-1">5.0</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 italic leading-relaxed mb-4">
+                                "Ordered a Mahle service kit and NGK Iridium spark plugs. Arrived in 2 days in heavy duty bubble packaging. Prices are significantly lower than dealership parts desks."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700">
+                            <img src="assets/images/avatars/sarah.jpg" alt="Sarah K." class="w-10 h-10 rounded-full object-cover border-2 border-blue-600/60 shadow-md flex-shrink-0">
+                            <div>
+                                <div class="font-bold text-xs text-slate-900 dark:text-white">Sarah K.</div>
+                                <div class="text-[10px] text-slate-400">2019 Toyota Camry Hybrid &bull; Verified Purchase</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 text-[11px] font-bold ms-1">5.0</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 italic leading-relaxed mb-4">
+                                "Upgraded my Ford F-150 with Bilstein B6 dampers and Bosch alternator. Smooth ride, precise damping, and stellar customer support when confirming part numbers."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700">
+                            <img src="assets/images/avatars/david.jpg" alt="David W." class="w-10 h-10 rounded-full object-cover border-2 border-emerald-600/60 shadow-md flex-shrink-0">
+                            <div>
+                                <div class="font-bold text-xs text-slate-900 dark:text-white">David W.</div>
+                                <div class="text-[10px] text-slate-400">2022 Ford F-150 &bull; Verified Purchase</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Latest Blog Posts / Maintenance Guides -->
+        <section class="py-14 max-w-7xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Maintenance & Compatibility Guides</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Expert advice from certified automotive technicians</p>
+                </div>
+                <a href="blog.html" class="text-xs font-bold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1 self-start sm:self-auto">
+                    View All Articles <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="blog-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700 hover:shadow-lg transition-all flex flex-col justify-between cursor-pointer" onclick="window.location.href='blog-detail.html?id=blog-1'">
+                    <div>
+                        <div class="w-full h-44 overflow-hidden relative bg-slate-900">
+                            <img src="assets/images/parts/spark-plugs.jpg" alt="OEM Part Number Matching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-red-600 px-2 py-0.5 rounded-md shadow-sm">Part Buying Guides</span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-slate-900 dark:text-white text-base mb-2 group-hover:text-red-600 transition-colors">
+                                <a href="blog-detail.html?id=blog-1" onclick="event.stopPropagation();">How to Match OEM Part Numbers to Prevent Fitment Issues</a>
+                            </h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">Understand VIN decoding, superseding part numbers, and cross-reference tables.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 text-[11px] text-slate-400 flex items-center justify-between border-t border-slate-100 dark:border-slate-700/60 pt-3">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-calendar text-red-500"></i> August 18, 2026</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 6 min read</span>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700 hover:shadow-lg transition-all flex flex-col justify-between cursor-pointer" onclick="window.location.href='blog-detail.html?id=blog-2'">
+                    <div>
+                        <div class="w-full h-44 overflow-hidden relative bg-slate-900">
+                            <img src="assets/images/parts/brake-rotors.jpg" alt="Brake Rotor Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-red-600 px-2 py-0.5 rounded-md shadow-sm">Maintenance Tips</span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-slate-900 dark:text-white text-base mb-2 group-hover:text-red-600 transition-colors">
+                                <a href="blog-detail.html?id=blog-2" onclick="event.stopPropagation();">Brake Disc Inspection: When to Machine vs. Replace Rotors</a>
+                            </h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">Learn how to measure minimum rotor thickness with a micrometer and select ceramic pads.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 text-[11px] text-slate-400 flex items-center justify-between border-t border-slate-100 dark:border-slate-700/60 pt-3">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-calendar text-red-500"></i> August 12, 2026</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 8 min read</span>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700 hover:shadow-lg transition-all flex flex-col justify-between cursor-pointer" onclick="window.location.href='blog-detail.html?id=blog-3'">
+                    <div>
+                        <div class="w-full h-44 overflow-hidden relative bg-slate-900">
+                            <img src="assets/images/parts/clutch-kit.jpg" alt="Workshop Sourcing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-red-600 px-2 py-0.5 rounded-md shadow-sm">Workshop Advice</span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-slate-900 dark:text-white text-base mb-2 group-hover:text-red-600 transition-colors">
+                                <a href="blog-detail.html?id=blog-3" onclick="event.stopPropagation();">Maximizing Workshop Profitability with Bulk Trade Sourcing</a>
+                            </h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">How repair shops save up to 35% on fast-moving consumables like spark plugs and filters.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 text-[11px] text-slate-400 flex items-center justify-between border-t border-slate-100 dark:border-slate-700/60 pt-3">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-calendar text-red-500"></i> August 04, 2026</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 11. Newsletter Signup Strip -->
+        <section class="py-14 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-4">
+                <div class="w-12 h-12 bg-red-600/20 border border-red-500/40 text-red-400 rounded-2xl flex items-center justify-center text-xl mx-auto shadow-md">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-black tracking-tight">Stay Ahead with Auto Parts Deals & Tech Bulletins</h2>
+                <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
+                    Subscribe to receive vehicle fitment updates, flash clearance codes, and 10% off your next parts order.
+                </p>
+
+                <form onsubmit="AutoPartsUI.handleNewsletterSubmit(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2 pt-2">
+                    <input type="email" id="newsletter-email-input" placeholder="Enter your email address..." required class="flex-1 bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-3 text-xs font-medium text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-600">
+                    <button type="submit" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-lg shadow-red-600/30 flex-shrink-0 cursor-pointer">
+                        Subscribe
+                    </button>
+                </form>
+
+                <div id="newsletter-feedback-msg" class="max-w-md mx-auto"></div>
+                <div class="text-[11px] text-slate-500">We respect your privacy. Unsubscribe at any time. Zero spam.</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 12. Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                
+                <!-- Col 1: Store Intro -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-xl font-black">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div class="text-xl font-black tracking-tight text-white">
+                            AUTO<span class="text-red-600">PARTS</span> PRO
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        Premier catalog storefront for genuine OEM and high-performance aftermarket auto spare parts. Serving retail drivers, trade technicians, and commercial workshops worldwide.
+                    </p>
+                    <div class="flex items-center gap-2.5 pt-2 text-slate-400 text-sm">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="Follow us on X" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-slate-800 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-slate-600"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#dc2743]"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Subscribe on YouTube" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#FF0000]"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Connect on LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#0A66C2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#0A66C2]"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products Catalog</a></li>
+                        <li><a href="compatibility-finder.html" class="hover:text-white transition-colors">Compatibility Finder</a></li>
+                        <li><a href="brands.html" class="hover:text-white transition-colors">Brands Directory</a></li>
+                        <li><a href="trade.html" class="text-amber-400 hover:text-amber-300 font-bold transition-colors">B2B Trade Portal</a></li>
+                        <li><a href="bulk-pricing.html" class="hover:text-white transition-colors">Bulk Workshop Pricing</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Customer Care -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Policies & Help</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing & Policy</a></li>
+                        <li><a href="cart.html" class="hover:text-white transition-colors">Shopping Cart</a></li>
+                        <li><a href="account.html" class="hover:text-white transition-colors">Customer Account</a></li>
+                        <li><a href="login.html" class="hover:text-white transition-colors">Customer Login</a></li>
+                        <li><a href="404.html" class="hover:text-white transition-colors">404 Error Page</a></li>
+                        <li><a href="coming-soon.html" class="hover:text-white transition-colors">Maintenance Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Store Info -->
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Warehouse Location</h4>
+                    <div class="space-y-3 text-xs text-slate-400">
+                        <div class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-red-500 mt-0.5"></i>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</a>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-red-500"></i>
+                            <a href="tel:+18005552886" class="hover:text-white transition-colors">+1 (800) 555-AUTO</a>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-red-500"></i>
+                            <a href="mailto:parts@autopartspro.com" class="hover:text-white transition-colors">parts@autopartspro.com</a>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-red-500"></i>
+                            <span>Mon–Fri: 7am – 7pm EST</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div>&copy; 2026 AutoParts Pro. All rights reserved. ThemeForest Ready Frontend HTML Template.</div>
+                <div class="flex items-center gap-4 text-lg text-slate-600">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-IN CART DRAWER CONTAINER -->
+    <div id="cart-drawer-backdrop" onclick="AutoPartsUI.toggleCartDrawer(false)" class="hidden opacity-0 fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 transition-opacity duration-300"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-slate-900 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between border-s border-slate-200 dark:border-slate-800">
+        <!-- Cart Drawer Header -->
+        <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white text-base">
+                <i class="fa-solid fa-basket-shopping text-red-600"></i>
+                <span>Your Shopping Cart</span>
+                <span class="js-cart-count-badge bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+            </div>
+            <button type="button" onclick="AutoPartsUI.toggleCartDrawer(false)" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Cart Drawer Items -->
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-5 space-y-4">
+            <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Cart Drawer Footer Summary -->
+        <div class="p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 space-y-3">
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400">
+                <span>Subtotal:</span>
+                <span class="js-cart-subtotal-display font-bold text-slate-900 dark:text-white">$0.00</span>
+            </div>
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400">
+                <span>Estimated Shipping:</span>
+                <span class="text-emerald-600 font-semibold">Calculated at checkout</span>
+            </div>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-700 flex justify-between text-sm font-extrabold text-slate-900 dark:text-white">
+                <span>Total Amount:</span>
+                <span class="js-cart-subtotal-display text-red-600 dark:text-red-400">$0.00</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+                <a href="cart.html" onclick="AutoPartsUI.toggleCartDrawer(false)" class="py-3 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-800 dark:text-white text-center font-bold text-xs rounded-xl transition-colors">
+                    View Cart
+                </a>
+                <a href="checkout.html" onclick="AutoPartsUI.toggleCartDrawer(false)" class="py-3 bg-red-600 hover:bg-red-700 text-white text-center font-bold text-xs rounded-xl transition-colors shadow-lg shadow-red-600/30">
+                    Checkout Now
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- QUICK VIEW MODAL CONTAINER -->
+    <div id="quick-view-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-3xl w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <button type="button" onclick="AutoPartsUI.closeQuickView()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="quick-view-content">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPARE MODAL CONTAINER -->
+    <div id="compare-modal" class="hidden opacity-0 fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-4xl w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-2 text-lg font-black text-slate-900 dark:text-white">
+                    <i class="fa-solid fa-code-compare text-red-600"></i>
+                    <span>Product Specification Comparison</span>
+                </div>
+                <button type="button" onclick="AutoPartsUI.closeCompareModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="compare-modal-content">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/compatibility-finder.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/catalog.js"></script>
+
+    <script>
+        // Render top selling products into carousel track on home page
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselTrack = document.getElementById('home-carousel-track');
+            if (carouselTrack && window.AutoPartsData) {
+                const topProducts = window.AutoPartsData.products.slice(0, 8);
+                carouselTrack.innerHTML = topProducts.map(p => {
+                    const isWish = window.AutoPartsStore ? window.AutoPartsStore.isInWishlist(p.id) : false;
+                    return `
+                        <div class="carousel-card-item w-[280px] sm:w-[300px] bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/90 dark:border-slate-700 p-4 shadow-sm hover:shadow-xl hover:border-red-500 transition-all flex flex-col justify-between group">
+                            <div>
+                                <div class="relative w-full h-44 rounded-xl overflow-hidden bg-slate-900 mb-3">
+                                    <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow">
+                                        ${p.badge || 'Top Seller'}
+                                    </span>
+                                    <button type="button" onclick="AutoPartsStore.toggleWishlist('${p.id}')" data-wishlist-id="${p.id}" class="js-wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm text-slate-700 dark:text-slate-200 hover:text-red-600 flex items-center justify-center transition-transform" title="Add to wishlist">
+                                        <i class="${isWish ? 'fa-solid fa-heart text-red-600' : 'fa-regular fa-heart'} text-xs"></i>
+                                    </button>
+                                </div>
+                                <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+                                    <span class="font-bold text-red-600 uppercase">${p.brand}</span>
+                                    <span class="font-mono">SKU: ${p.sku}</span>
+                                </div>
+                                <h3 class="font-bold text-sm text-slate-900 dark:text-white line-clamp-2 mb-2 group-hover:text-red-600 transition-colors">
+                                    <a href="product-detail.html?id=${p.id}">${p.name}</a>
+                                </h3>
+                                <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="font-bold text-slate-700 dark:text-slate-300 text-xs">${p.rating}</span>
+                                    <span class="text-slate-400 text-[10px]">(${p.reviewsCount})</span>
+                                </div>
+                            </div>
+                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/80 flex items-center justify-between">
+                                <div>
+                                    <div class="text-base font-extrabold text-slate-900 dark:text-white">$${p.price.toFixed(2)}</div>
+                                    <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">Trade: $${p.workshopPrice.toFixed(2)}</div>
+                                </div>
+                                <button type="button" onclick="AutoPartsStore.addToCart('${p.id}', 1); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-xs flex items-center gap-1.5 transition-all shadow-md shadow-red-600/20 active:scale-95">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                if (window.AutoPartsUI && window.AutoPartsUI.updateWishlistButtons) {
+                    window.AutoPartsUI.updateWishlistButtons();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
