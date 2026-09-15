@@ -42,12 +42,12 @@
 
 
                                             <!-- Main Navigation Header (Sticky) -->
-    <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
+            <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
         <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-2">
             <div class="flex items-center justify-between gap-2 sm:gap-4">
                 
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
+                <a href="index.html" dir="ltr" class="header-logo flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
                     <div class="w-8 sm:w-10 h-8 sm:h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-base sm:text-xl font-black group-hover:scale-105 transition-transform shadow-md shadow-red-600/30">
                         <i class="fa-solid fa-gears"></i>
                     </div>
@@ -63,7 +63,7 @@
                 <nav class="hidden lg:flex items-center gap-1 xl:gap-3 text-[11px] xl:text-xs font-semibold whitespace-nowrap flex-shrink-0">
                     <!-- Home Dropdown Menu -->
                     <div class="relative nav-dropdown-parent group py-1 cursor-pointer select-none whitespace-nowrap">
-                        <button type="button" class="flex items-center gap-1 font-bold text-red-500 border-b-2 border-red-500 pb-0.5 px-1 xl:px-1.5 focus:outline-none whitespace-nowrap">
+                        <button dir="ltr" type="button" class="flex items-center gap-1 text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap focus:outline-none">
                             <span>Home</span>
                             <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
@@ -71,7 +71,7 @@
                         <!-- Dropdown Menu Content -->
                         <div class="nav-dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-2xl rounded-2xl border border-slate-200 dark:border-slate-700 p-2.5 z-50 space-y-1.5 whitespace-normal">
                             <!-- Home Page 1 -->
-                            <a href="index.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
+                            <a href="index.html" dir="ltr" class="header-logo block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
                                 <div class="flex items-center justify-between gap-1 mb-0.5">
                                     <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-red-600 transition-colors">Home Page 1</span>
                                     <span class="text-[9px] bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 font-extrabold px-1.5 py-0.5 rounded">Retail</span>
@@ -130,7 +130,7 @@
                     </a>
 
                     <!-- Cart Drawer Trigger Button (My Cart) -->
-                    <button type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
+                    <button dir="ltr" type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
                         <div class="relative">
                             <i class="fa-solid fa-cart-shopping text-sm sm:text-base"></i>
                             <span class="js-cart-count-badge hidden absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-slate-900">0</span>
@@ -141,8 +141,8 @@
                         </div>
                     </button>
 
-                    <!-- Prominent Mobile Menu Hamburger Button (Always visible & accessible below lg) -->
-                    <button type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
+                    <!-- Prominent Mobile Menu Hamburger Button -->
+                    <button dir="ltr" type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
                         <i class="fa-solid fa-bars text-sm sm:text-base"></i>
                         <span class="text-[10px] font-bold uppercase tracking-wider hidden xs:inline">Menu</span>
                     </button>
@@ -273,17 +273,14 @@
         <!-- 2. QUICK ORDER WIDGET: Enter multiple part numbers/quantities at once and add all to cart in one action -->
         <section id="quick-order-section" class="py-14 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
-                    <div>
-                        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-red-500 uppercase tracking-widest mb-1">
-                            <i class="fa-solid fa-bolt"></i> High-Speed Batch Ordering Engine
-                        </div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Workshop Quick Order Widget</h2>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Enter multiple part numbers or OEM SKUs, set quantities, and push all items directly to your trade cart.</p>
+                <div class="text-center max-w-2xl mx-auto mb-8 flex flex-col items-center justify-center">
+                    <div class="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-red-500 uppercase tracking-widest mb-1">
+                        <i class="fa-solid fa-bolt"></i> High-Speed Batch Ordering Engine
                     </div>
-
-                    <div class="flex items-center gap-2">
-                        <button type="button" onclick="AutoPartsTrade.addQuickOrderRow()" class="px-4 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white rounded-xl text-xs font-bold transition-colors border border-slate-300 dark:border-slate-700 flex items-center gap-1.5">
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Workshop Quick Order Widget</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Enter multiple part numbers or OEM SKUs, set quantities, and push all items directly to your trade cart.</p>
+                    <div class="flex items-center justify-center gap-2 mt-4">
+                        <button dir="ltr" type="button" onclick="AutoPartsTrade.addQuickOrderRow()" class="px-4 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white rounded-xl text-xs font-bold transition-colors border border-slate-300 dark:border-slate-700 flex items-center gap-1.5">
                             <i class="fa-solid fa-plus text-red-500"></i>
                             <span>Add Part Line</span>
                         </button>
@@ -350,7 +347,7 @@
                         <i class="fa-solid fa-file-csv text-red-500 text-base"></i>
                         <span>Need to order from an estimate software export (Audatex / Mitchell / Alldata)?</span>
                     </div>
-                    <button type="button" onclick="AutoPartsTrade.openTradeModal()" class="text-red-400 hover:text-red-300 font-bold underline flex items-center gap-1">
+                    <button dir="ltr" type="button" onclick="AutoPartsTrade.openTradeModal()" class="text-red-400 hover:text-red-300 font-bold underline flex items-center gap-1">
                         Upload Parts List (CSV / PDF) <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </button>
                 </div>
@@ -553,18 +550,30 @@
         <!-- 5. "SHOP BY VEHICLE FLEET" TOOL (Search compatible parts across multiple vehicles at once) -->
         <section id="fleet-search-section" class="py-14 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-                    <div>
-                        <div class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-                            <i class="fa-solid fa-network-wired"></i> Multi-Vehicle Procurement
-                        </div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Shop by Vehicle Fleet</h2>
-                        <p class="text-xs text-slate-400 mt-1">Add multiple fleet or client cars and find cross-compatible parts in one unified view.</p>
+                <div class="text-center max-w-2xl mx-auto mb-8 flex flex-col items-center justify-center">
+                    <div class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-1 flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-network-wired"></i> Multi-Vehicle Procurement
                     </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Shop by Vehicle Fleet</h2>
+                    <p class="text-xs text-slate-400 mt-1">Add multiple fleet or client cars and find cross-compatible parts in one unified view.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     
+                    <!-- Fleet Cross-Compatible Parts Results Column -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm text-slate-900 dark:text-white">Cross-Fleet Fast Moving Maintenance Packs</h3>
+                            <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> 100% Guaranteed Fleet Fitment
+                            </span>
+                        </div>
+
+                        <div id="fleet-matrix-results" class="space-y-3">
+                            <!-- Populated dynamically via AutoPartsTrade.updateFleetCompatibilityMatrix() -->
+                        </div>
+                    </div>
+
                     <!-- Fleet Vehicles Management Column -->
                     <div class="lg:col-span-5 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-md">
                         <div class="flex items-center justify-between border-b border-slate-800 pb-3">
@@ -611,20 +620,6 @@
                         </div>
                     </div>
 
-                    <!-- Fleet Cross-Compatible Parts Results -->
-                    <div class="lg:col-span-7 space-y-4">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-bold text-sm text-slate-900 dark:text-white">Cross-Fleet Fast Moving Maintenance Packs</h3>
-                            <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> 100% Guaranteed Fleet Fitment
-                            </span>
-                        </div>
-
-                        <div id="fleet-matrix-results" class="space-y-3">
-                            <!-- Populated dynamically via AutoPartsTrade.updateFleetCompatibilityMatrix() -->
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -632,16 +627,13 @@
         <!-- 6. LIVE STOCK / AVAILABILITY SNAPSHOT (for popular commercial-grade parts) -->
         <section id="inventory-snapshot-section" class="py-14 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-                    <div>
-                        <div class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Live Fulfillment Feeds
-                        </div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Regional Hub Stock & Dispatch Snapshot</h2>
-                        <p class="text-xs text-slate-400 mt-1">Real-time inventory levels across our central fulfillment facilities</p>
+                <div class="text-center max-w-2xl mx-auto mb-8 flex flex-col items-center justify-center">
+                    <div class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-1 flex items-center justify-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Live Fulfillment Feeds
                     </div>
-
-                    <div class="flex items-center gap-3 text-xs">
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Regional Hub Stock & Dispatch Snapshot</h2>
+                    <p class="text-xs text-slate-400 mt-1">Real-time inventory levels across our central fulfillment facilities</p>
+                    <div class="flex items-center justify-center gap-3 text-xs mt-3">
                         <span class="p-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 font-mono">
                             <i class="fa-solid fa-server text-red-500 me-1"></i> Sync: Live (0s delay)
                         </span>
@@ -723,12 +715,10 @@
         <!-- 7. RECENTLY RESTOCKED / NEW TRADE ARRIVALS -->
         <section class="py-14 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
-                    <div>
-                        <div class="text-xs font-bold text-red-500 uppercase tracking-widest mb-1">Trade Buyer Catalog</div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Commercial & Workshop Fast-Movers</h2>
-                    </div>
-                    <a href="products.html" class="text-xs font-bold text-red-400 hover:underline flex items-center gap-1">
+                <div class="text-center max-w-2xl mx-auto mb-8 flex flex-col items-center justify-center">
+                    <div class="text-xs font-bold text-red-500 uppercase tracking-widest mb-1">Trade Buyer Catalog</div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Commercial & Workshop Fast-Movers</h2>
+                    <a href="products.html" class="text-xs font-bold text-red-400 hover:underline flex items-center justify-center gap-1 mt-2">
                         View All 50,000+ Trade Items <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -753,7 +743,7 @@
                                 <div class="text-base font-mono font-black text-slate-900 dark:text-white">$145.00 <span class="text-[10px] text-slate-400 font-sans">/unit</span></div>
                                 <div class="text-[10px] text-slate-400 line-through">$189.99 Retail</div>
                             </div>
-                            <button type="button" onclick="AutoPartsStore.addToCart('part-101', 10); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
+                            <button dir="ltr" type="button" onclick="AutoPartsStore.addToCart('part-101', 10); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
                                 <i class="fa-solid fa-boxes-stacked"></i> 10x Pack
                             </button>
                         </div>
@@ -778,7 +768,7 @@
                                 <div class="text-base font-mono font-black text-slate-900 dark:text-white">$9.20 <span class="text-[10px] text-slate-400 font-sans">/plug</span></div>
                                 <div class="text-[10px] text-slate-400 line-through">$13.99 Retail</div>
                             </div>
-                            <button type="button" onclick="AutoPartsStore.addToCart('part-102', 24); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
+                            <button dir="ltr" type="button" onclick="AutoPartsStore.addToCart('part-102', 24); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
                                 <i class="fa-solid fa-boxes-stacked"></i> 24x Pack
                             </button>
                         </div>
@@ -803,7 +793,7 @@
                                 <div class="text-base font-mono font-black text-slate-900 dark:text-white">$8.50 <span class="text-[10px] text-slate-400 font-sans">/unit</span></div>
                                 <div class="text-[10px] text-slate-400 line-through">$14.99 Retail</div>
                             </div>
-                            <button type="button" onclick="AutoPartsStore.addToCart('part-105', 20); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
+                            <button dir="ltr" type="button" onclick="AutoPartsStore.addToCart('part-105', 20); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
                                 <i class="fa-solid fa-boxes-stacked"></i> 20x Pack
                             </button>
                         </div>
@@ -828,7 +818,7 @@
                                 <div class="text-base font-mono font-black text-slate-900 dark:text-white">$275.00</div>
                                 <div class="text-[10px] text-slate-400 line-through">$349.99 Retail</div>
                             </div>
-                            <button type="button" onclick="AutoPartsStore.addToCart('part-103', 1); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
+                            <button dir="ltr" type="button" onclick="AutoPartsStore.addToCart('part-103', 1); AutoPartsUI.toggleCartDrawer(true)" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1">
                                 <i class="fa-solid fa-cart-plus"></i> Add Unit
                             </button>
                         </div>
@@ -915,15 +905,17 @@
 
         <!-- 9. REQUEST A TRADE ACCOUNT CTA & FAST APPLICATION BANNER -->
         <section class="py-14 bg-gradient-to-r from-red-950 via-slate-950 to-slate-950 border-b border-slate-800 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-                <div class="space-y-3 max-w-xl text-center lg:text-start">
-                    <span class="bg-red-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-md">Fast-Track B2B Onboarding</span>
-                    <h2 class="text-2xl sm:text-3xl font-black text-white">Ready to Equip Your Workshop with Trade Tier Pricing?</h2>
-                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <div class="max-w-4xl mx-auto px-4 relative z-10 flex flex-col items-center text-center gap-6" dir="ltr">
+                <div class="space-y-3 flex flex-col items-center text-center" dir="ltr">
+                    <div>
+                        <span class="inline-block bg-red-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-md">Fast-Track B2B Onboarding</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white" dir="ltr">Ready to Equip Your Workshop with Trade Tier Pricing?</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto" dir="ltr">
                         Submit your business details in 2 minutes. Get approved today with immediate access to tier discounts, net 30 invoicing, and dedicated account specialists.
                     </p>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto justify-center">
+                <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
                     <button type="button" onclick="AutoPartsTrade.openTradeModal()" class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-xl shadow-red-600/40 transition-all hover:scale-105 flex items-center justify-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-file-signature"></i>
                         <span>Apply for Trade Account (2 Min)</span>
@@ -975,54 +967,95 @@
     </main>
 
     <!-- B2B Footer -->
-    <footer class="bg-slate-950 text-slate-400 pt-12 pb-8 border-t border-slate-800 text-xs">
+        <!-- 12. Footer -->
+        <!-- 12. Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center text-white text-base font-black">
-                            <i class="fa-solid fa-warehouse"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-left">
+                
+                <!-- Col 1: Logo & Company Bio & Socials -->
+                <div class="space-y-4">
+                    <a href="index.html" dir="ltr" class="header-logo inline-flex items-center gap-2">
+                        <div class="w-9 h-9 bg-red-600 rounded-xl flex items-center justify-center text-white text-lg font-black shadow-md shadow-red-600/30">
+                            <i class="fa-solid fa-gears"></i>
                         </div>
-                        <span class="font-black text-sm text-white">AUTOPARTS PRO TRADE</span>
+                        <div>
+                            <div class="text-lg font-black tracking-tight text-white leading-tight">
+                                AUTO<span class="text-red-600">PARTS</span>
+                            </div>
+                            <div class="text-[9px] uppercase font-bold text-slate-400 tracking-widest leading-none">PRO STOREFRONT</div>
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        A premium automotive parts and catalog center dedicated to helping you find genuine OEM and aftermarket components with precision.
+                    </p>
+                    <div class="flex items-center gap-2.5 pt-1 text-slate-300">
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-youtube text-sm"></i></a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-slate-700 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-facebook-f text-sm"></i></a>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">
-                        Dedicated B2B procurement division for certified independent repair shops, commercial fleets, and automotive institutions.
-                    </p>
                 </div>
+
+                <!-- Col 2: Quick Links -->
                 <div>
-                    <h4 class="font-bold text-white uppercase text-[11px] mb-3">Trade Navigation</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#quick-order-section" class="hover:text-white transition-colors">Quick Order SKU</a></li>
-                        <li><a href="#fleet-search-section" class="hover:text-white transition-colors">Fleet Lookup</a></li>
-                        <li><a href="bulk-pricing.html" class="hover:text-white transition-colors">Wholesale Tier Matrix</a></li>
-                        <li><a href="products.html" class="hover:text-white transition-colors">Full Parts Catalog</a></li>
-                        <li><a href="index.html" class="text-red-400 hover:text-red-300 font-bold">Switch to Retail Store</a></li>
+                    <h4 class="font-bold text-white text-base mb-4 tracking-tight">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home Page</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products Catalog</a></li>
+                        <li><a href="compatibility-finder.html" class="hover:text-white transition-colors">Compatibility Finder</a></li>
+                        <li><a href="brands.html" class="hover:text-white transition-colors">Brands Directory</a></li>
+                        <li><a href="bulk-pricing.html" class="hover:text-white transition-colors">Bulk Workshop Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Support</a></li>
                     </ul>
                 </div>
+
+                <!-- Col 3: Members -->
                 <div>
-                    <h4 class="font-bold text-white uppercase text-[11px] mb-3">Commercial Terms</h4>
-                    <ul class="space-y-2">
-                        <li><a href="pricing.html" class="hover:text-white transition-colors">Commercial Credit Terms</a></li>
-                        <li><a href="pricing.html" class="hover:text-white transition-colors">Core Deposit Return Policy</a></li>
-                        <li><a href="about.html" class="hover:text-white transition-colors">Warehouse Logistics</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Account Representative Directory</a></li>
+                    <h4 class="font-bold text-white text-base mb-4 tracking-tight">Members</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="login.html" class="hover:text-white transition-colors">Login</a></li>
+                        <li><a href="register.html" class="hover:text-white transition-colors">Register</a></li>
+                        <li><a href="account.html" class="hover:text-white transition-colors">Customer Dashboard</a></li>
+                        <li><a href="cart.html" class="hover:text-white transition-colors">Shopping Cart</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing & Policy</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold text-white uppercase text-[11px] mb-3">Detroit Central Logistics</h4>
-                    <p class="text-slate-400 leading-relaxed">
-                        4820 Motorway Industrial Park, Suite 100<br>
-                        Detroit, MI 48201<br>
-                        Trade Desk: Mon–Fri 6:30 AM – 8:00 PM EST
-                    </p>
+
+                <!-- Col 4: Visit Us -->
+                <div class="space-y-4">
+                    <h4 class="font-bold text-white text-base mb-4 tracking-tight">Visit Us</h4>
+                    <div class="space-y-3 text-xs text-slate-400">
+                        <div class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-red-500 mt-0.5 text-sm flex-shrink-0"></i>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors leading-relaxed">4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</a>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-red-500 text-sm flex-shrink-0"></i>
+                            <a href="tel:+18005552886" class="hover:text-white transition-colors">+1 (800) 555-AUTO</a>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-red-500 text-sm flex-shrink-0"></i>
+                            <a href="mailto:parts@autopartspro.com" class="hover:text-white transition-colors">parts@autopartspro.com</a>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-red-500 text-sm flex-shrink-0"></i>
+                            <span>Mon – Sun: 6:00 AM – 9:00 PM</span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <div class="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
-                <div>&copy; 2026 AutoParts Pro B2B Division. All rights reserved.</div>
-                <div class="flex items-center gap-4">
-                    <span class="text-slate-400">Authorized OEM Distributor</span>
-                    <span class="text-slate-400">&bull;</span>
-                    <span class="text-slate-400">ASE Certified Support</span>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div dir="ltr">&copy; 2026 AutoParts Pro. All rights reserved. ThemeForest Ready Frontend HTML Template.</div>
+                <div class="flex items-center gap-4 text-lg text-slate-600">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
                 </div>
             </div>
         </div>

@@ -601,41 +601,40 @@ window.AutoPartsData = {
     articles: [
         {
             id: "blog-1",
-            title: "How to Match OEM Part Numbers to Prevent Compatibility Issues",
+            title: "LED vs. Matrix Headlight Upgrades: OEM Retrofitting & Beam Alignment",
             category: "Part Buying Guides",
             date: "August 18, 2026",
-            author: "Marcus Vance, Master Mechanic",
-            readTime: "6 min read",
-            image: "assets/images/parts/spark-plugs.jpg",
-            summary: "Understand VIN decoding, superseding part numbers, and cross-reference tables so you order the right part the very first time.",
-            content: `Ordering spare parts online can be frustrating if a delivered component doesn't align with your car's mounting bracket or wiring harness. In this guide, we break down how to read OEM part numbers and cross-reference them with aftermarket alternatives.
+            author: "Alex Rivera, Senior Technician",
+            readTime: "5 min read",
+            image: "assets/images/parts/headlight.jpg",
+            summary: "A complete guide to upgrading halogen headlights to projector LED assemblies, CAN-bus anti-flicker decoders, and proper optical alignment.",
+            content: `Upgrading your vehicle's lighting from traditional halogen bulbs to advanced LED or Matrix headlight assemblies significantly improves night-time road visibility and driving safety.
 
-### 1. What is an OEM Part Number?
-An OEM (Original Equipment Manufacturer) part number is a unique alphanumeric identifier assigned by the car manufacturer. Unlike general model descriptions, the OEM number guarantees exact dimensions, electrical resistance, and mounting points.
+### 1. Projector Housing vs Reflector Assemblies
+Upgrading to high-output LED bulbs requires projector optics with crisp cut-off lines to prevent glare for oncoming drivers.
 
-### 2. Superseded Part Numbers
-Car manufacturers frequently update component designs to resolve factory revisions. When a part is updated, its part number changes (supersedes). Always verify if your old part number has been superseded by a newer revision before assuming a part is incompatible.
+### 2. CAN-bus Decoders & Anti-Flicker Harnesses
+Modern vehicles monitor bulb current draw. Installing low-wattage LEDs without anti-flicker resistors can trigger dashboard bulb-out warnings.
 
-### 3. Using Our Vehicle Compatibility Tool
-Our site allows you to input your exact Make, Model, Year, and Engine code. This cross-checks thousands of part schematics in real-time.`
+### 3. Optical Beam Alignment
+Proper vertical and horizontal beam alignment ensures maximum throw distance without blinding traffic.`
         },
         {
             id: "blog-2",
-            title: "Brake Disc Inspection: When to Machine Rotors vs. Complete Replacement",
+            title: "Cabin Air Filtration & HVAC Blower Motor Maintenance",
             category: "Maintenance Tips",
             date: "August 12, 2026",
-            author: "Sarah Jenkins, Technical Director",
-            readTime: "8 min read",
-            image: "assets/images/parts/brake-rotors.jpg",
-            summary: "Learn how to measure minimum rotor thickness with a micrometer, identify thermal stress cracks, and choose between ceramic or semi-metallic pads.",
-            content: `Squeal, pulsation through the pedal, or reduced stopping power are clear signs your braking system needs attention. Here is how professional technicians evaluate brake rotors.
+            author: "David Ross, Technical Specialist",
+            readTime: "6 min read",
+            image: "assets/images/parts/filters.jpg",
+            summary: "Improve cabin air quality, prevent mold odor, and protect HVAC blower motor resistors with multi-layer activated carbon cabin filters.",
+            content: `Reduced airflow from A/C vents or persistent musty odors inside the vehicle cabin are primary indicators of a clogged cabin air filter.
 
-### Measuring Minimum Thickness
-Every brake rotor has a stamped 'Min Th' (Minimum Thickness) spec on its outer edge. If resurfacing the rotor brings its thickness below this safety threshold, the rotor cannot dissipate thermal friction effectively and must be replaced immediately.
+### Multi-Layer Activated Carbon Filtration
+Electrostatic particulate layers trap dust, pollen, and road debris while activated carbon absorbs harmful exhaust gases and moisture odors.
 
-### Ceramic vs Semi-Metallic Pads
-* **Ceramic Pads**: 90% less brake dust, quiet operation, ideal for daily city driving.
-* **Semi-Metallic Pads**: Superior high-temp friction coefficient, ideal for towing, heavy trucks, and track days.`
+### Protecting Blower Motor Resistors
+A severely restricted cabin filter forces the HVAC blower motor to draw excessive current, causing thermal resistor failure and expensive motor burnout.`
         },
         {
             id: "blog-3",
@@ -813,6 +812,31 @@ When a cabin filter becomes clogged with leaves and debris, the blower motor fan
 
 ### Bi-Annual Replacement Schedule
 Replace cabin air filters every 12,000 miles or 12 months (or more frequently in dusty environments or heavy urban traffic).`
+        },
+        {
+            id: "blog-12",
+            title: "High-Performance Brake Fluid Bleeding: DOT 4 vs. DOT 5.1 & Moisture Contamination",
+            category: "Brake Components",
+            date: "April 29, 2026",
+            author: "Marcus Vance, Master Mechanic",
+            readTime: "7 min read",
+            image: "assets/images/parts/brake-pads.jpg",
+            summary: "Learn how hygroscopic brake fluid absorbs atmospheric moisture, lowers boiling point thresholds, and causes pedal fade during hard braking.",
+            content: `Brake fluid is the vital hydraulic link between your brake pedal and calipers. Because glycol-based brake fluids are hygroscopic, they continuously absorb atmospheric moisture over time, compromising braking efficiency.
+
+### 1. Dry vs. Wet Boiling Points (DOT 3, DOT 4, DOT 5.1)
+
+* **DOT 4 Synthetic**: Minimum dry boiling point of 230°C (446°F), wet boiling point of 155°C (311°F). Ideal for modern ABS/ESP systems.
+* **DOT 5.1 Non-Silicone**: Low viscosity at sub-zero temperatures, providing rapid hydraulic pressure response in advanced electronic stability control systems.
+* **Moisture Contamination**: Just 3% water contamination drops the boiling point of brake fluid by over 50°C, risking vapor lock and sudden pedal fade under heavy braking.
+
+### 2. Pressure Bleeding vs. Vacuum Bleeding
+
+Utilizing a pressurized brake bleeder at 15–20 PSI ensures all trapped air bubbles and degraded, darkened fluid are thoroughly flushed from ABS hydraulic control units without damaging master cylinder internal seals.
+
+### 3. Recommended Flush Intervals
+
+Professional technicians recommend flushing brake fluid every 2 years or 24,000 miles, or testing fluid moisture content with an electronic conductivity tester during routine brake service.`
         }
     ]
 };

@@ -32,6 +32,7 @@ window.AutoPartsUI = {
         this.updateWishlistButtons();
         this.highlightActiveNav();
         this.updateAuthTopLink();
+        this.initHorizontalTrackScroll();
 
         window.addEventListener('userUpdated', () => this.updateAuthTopLink());
 
@@ -532,8 +533,12 @@ window.AutoPartsUI = {
     },
 
     toggleRTL() {
+        document.documentElement.classList.add('disable-transitions');
         const isRTL = window.AutoPartsStore.getRTL();
         window.AutoPartsStore.setRTL(!isRTL);
+        setTimeout(() => {
+            document.documentElement.classList.remove('disable-transitions');
+        }, 50);
         this.showToast(`Layout switched to <strong>${!isRTL ? 'RTL' : 'LTR'}</strong>`, 'info');
     },
 
@@ -1173,6 +1178,36 @@ window.AutoPartsUI = {
         }
     },
 
+    initHorizontalTrackScroll() {
+        const tracks = document.querySelectorAll('.carousel-track-container');
+        tracks.forEach(track => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            track.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - track.offsetLeft;
+                scrollLeft = track.scrollLeft;
+            });
+            track.addEventListener('mouseleave', () => { isDown = false; });
+            track.addEventListener('mouseup', () => { isDown = false; });
+            track.addEventListener('mousemove', (e) => {
+                if(!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - track.offsetLeft;
+                const walk = (x - startX) * 2;
+                track.scrollLeft = scrollLeft - walk;
+            });
+            track.addEventListener('wheel', (e) => {
+                if (e.deltaY !== 0 && !e.shiftKey) {
+                    e.preventDefault();
+                    track.scrollLeft += e.deltaY;
+                }
+            }, { passive: false });
+        });
+    },
+
     handleNewsletterSubmit(e) {
         if (e) e.preventDefault();
         const input = document.getElementById('newsletter-email-input');
@@ -1546,7 +1581,7 @@ window.AutoPartsTrade = {
         }).slice(0, 5);
 
         matrixContainer.innerHTML = matched.map(p => `
-            <div class="flex flex-col sm:flex-row items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-red-500 transition-all gap-4">
+            <div dir="ltr" class="flex flex-col sm:flex-row items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-red-500 transition-all gap-4">
                 <div class="flex items-center gap-3 w-full sm:w-auto">
                     <img src="${p.image}" class="w-14 h-14 object-cover rounded-lg bg-slate-100 dark:bg-slate-700 flex-shrink-0">
                     <div>
@@ -1559,14 +1594,14 @@ window.AutoPartsTrade = {
                     </div>
                 </div>
                 <div class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-slate-700">
-                    <div class="text-end">
-                        <div class="text-xs font-mono font-black text-red-600 dark:text-red-400">$${(p.workshopPrice || p.price).toFixed(2)}</div>
-                        <div class="text-[10px] text-slate-400">Workshop Tier 2</div>
-                    </div>
                     <button type="button" onclick="AutoPartsStore.addToCart('${p.id}', 10); AutoPartsUI.toggleCartDrawer(true)" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-lg transition-colors flex items-center gap-1.5 flex-shrink-0">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <span>Order Fleet Pack (10x)</span>
                     </button>
+                    <div class="text-end">
+                        <div class="text-xs font-mono font-black text-red-600 dark:text-red-400">$${(p.workshopPrice || p.price).toFixed(2)}</div>
+                        <div class="text-[10px] text-slate-400">Workshop Tier 2</div>
+                    </div>
                 </div>
             </div>
         `).join('');

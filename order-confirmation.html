@@ -29,12 +29,12 @@
 
 
                                             <!-- Main Navigation Header (Sticky) -->
-    <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
+            <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-xl sticky top-0 z-50 border-b border-slate-800 transition-all w-full">
         <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-2">
             <div class="flex items-center justify-between gap-2 sm:gap-4">
                 
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
+                <a href="index.html" dir="ltr" class="header-logo flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
                     <div class="w-8 sm:w-10 h-8 sm:h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-base sm:text-xl font-black group-hover:scale-105 transition-transform shadow-md shadow-red-600/30">
                         <i class="fa-solid fa-gears"></i>
                     </div>
@@ -50,7 +50,7 @@
                 <nav class="hidden lg:flex items-center gap-1 xl:gap-3 text-[11px] xl:text-xs font-semibold whitespace-nowrap flex-shrink-0">
                     <!-- Home Dropdown Menu -->
                     <div class="relative nav-dropdown-parent group py-1 cursor-pointer select-none whitespace-nowrap">
-                        <button type="button" class="flex items-center gap-1 text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap focus:outline-none">
+                        <button dir="ltr" type="button" class="flex items-center gap-1 text-slate-200 hover:text-red-400 px-1 xl:px-1.5 py-0.5 rounded transition-colors whitespace-nowrap focus:outline-none">
                             <span>Home</span>
                             <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
@@ -58,7 +58,7 @@
                         <!-- Dropdown Menu Content -->
                         <div class="nav-dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-2xl rounded-2xl border border-slate-200 dark:border-slate-700 p-2.5 z-50 space-y-1.5 whitespace-normal">
                             <!-- Home Page 1 -->
-                            <a href="index.html" class="block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
+                            <a href="index.html" dir="ltr" class="header-logo block p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700/70 transition-all border border-transparent hover:border-red-500/30 group/item">
                                 <div class="flex items-center justify-between gap-1 mb-0.5">
                                     <span class="font-black text-xs text-slate-900 dark:text-white group-hover/item:text-red-600 transition-colors">Home Page 1</span>
                                     <span class="text-[9px] bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 font-extrabold px-1.5 py-0.5 rounded">Retail</span>
@@ -117,7 +117,7 @@
                     </a>
 
                     <!-- Cart Drawer Trigger Button (My Cart) -->
-                    <button type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
+                    <button dir="ltr" type="button" onclick="AutoPartsUI.toggleCartDrawer(true)" class="flex items-center gap-1.5 sm:gap-2 bg-slate-800 hover:bg-red-600 text-white px-2 sm:px-3 py-1.5 rounded-xl transition-all font-semibold text-xs border border-slate-700 flex-shrink-0">
                         <div class="relative">
                             <i class="fa-solid fa-cart-shopping text-sm sm:text-base"></i>
                             <span class="js-cart-count-badge hidden absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-slate-900">0</span>
@@ -128,8 +128,8 @@
                         </div>
                     </button>
 
-                    <!-- Prominent Mobile Menu Hamburger Button (Always visible & accessible below lg) -->
-                    <button type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
+                    <!-- Prominent Mobile Menu Hamburger Button -->
+                    <button dir="ltr" type="button" onclick="AutoPartsUI.toggleMobileMenu(true)" class="lg:hidden px-2.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md transition-colors flex-shrink-0 flex items-center gap-1 border border-red-500/50" aria-label="Open Navigation Menu" title="Open Navigation Menu">
                         <i class="fa-solid fa-bars text-sm sm:text-base"></i>
                         <span class="text-[10px] font-bold uppercase tracking-wider hidden xs:inline">Menu</span>
                     </button>
@@ -186,77 +186,81 @@
     </main>
 
     <!-- Footer -->
+        <!-- 12. Footer -->
+        <!-- 12. Footer -->
     <footer class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-left">
                 
-                <!-- Col 1: Store Intro -->
-                <div class="lg:col-span-2 space-y-4">
-                    <a href="index.html" class="flex items-center gap-2">
-                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-xl font-black">
+                <!-- Col 1: Logo & Company Bio & Socials -->
+                <div class="space-y-4">
+                    <a href="index.html" dir="ltr" class="header-logo inline-flex items-center gap-2">
+                        <div class="w-9 h-9 bg-red-600 rounded-xl flex items-center justify-center text-white text-lg font-black shadow-md shadow-red-600/30">
                             <i class="fa-solid fa-gears"></i>
                         </div>
-                        <div class="text-xl font-black tracking-tight text-white">
-                            AUTO<span class="text-red-600">PARTS</span> PRO
+                        <div>
+                            <div class="text-lg font-black tracking-tight text-white leading-tight">
+                                AUTO<span class="text-red-600">PARTS</span>
+                            </div>
+                            <div class="text-[9px] uppercase font-bold text-slate-400 tracking-widest leading-none">PRO STOREFRONT</div>
                         </div>
                     </a>
-                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
-                        Premier catalog storefront for genuine OEM and high-performance aftermarket auto spare parts. Serving retail drivers, trade technicians, and commercial workshops worldwide.
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        A premium automotive parts and catalog center dedicated to helping you find genuine OEM and aftermarket components with precision.
                     </p>
-                    <div class="flex items-center gap-2.5 pt-2 text-slate-400 text-sm">
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow us on Facebook" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="Follow us on X" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-slate-800 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-slate-600"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Follow us on Instagram" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#dc2743]"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Subscribe on YouTube" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#FF0000]"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Connect on LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-[#0A66C2] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm border border-slate-800/80 hover:border-[#0A66C2]"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <div class="flex items-center gap-2.5 pt-1 text-slate-300">
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-youtube text-sm"></i></a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-slate-700 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-800/80"><i class="fa-brands fa-facebook-f text-sm"></i></a>
                     </div>
                 </div>
 
                 <!-- Col 2: Quick Links -->
                 <div>
-                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Navigation</h4>
-                    <ul class="space-y-2 text-xs">
+                    <h4 class="font-bold text-white text-base mb-4 tracking-tight">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home Page</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="products.html" class="hover:text-white transition-colors">Products Catalog</a></li>
                         <li><a href="compatibility-finder.html" class="hover:text-white transition-colors">Compatibility Finder</a></li>
                         <li><a href="brands.html" class="hover:text-white transition-colors">Brands Directory</a></li>
                         <li><a href="bulk-pricing.html" class="hover:text-white transition-colors">Bulk Workshop Pricing</a></li>
-                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="contact.html" class="hover:text-white transition-colors">Contact Support</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3: Customer Care -->
+                <!-- Col 3: Members -->
                 <div>
-                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Policies & Help</h4>
-                    <ul class="space-y-2 text-xs">
-                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing & Policy</a></li>
+                    <h4 class="font-bold text-white text-base mb-4 tracking-tight">Members</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="login.html" class="hover:text-white transition-colors">Login</a></li>
+                        <li><a href="register.html" class="hover:text-white transition-colors">Register</a></li>
+                        <li><a href="account.html" class="hover:text-white transition-colors">Customer Dashboard</a></li>
                         <li><a href="cart.html" class="hover:text-white transition-colors">Shopping Cart</a></li>
-                        <li><a href="account.html" class="hover:text-white transition-colors">Customer Account</a></li>
-                        <li><a href="login.html" class="hover:text-white transition-colors">Customer Login</a></li>
-                        <li><a href="404.html" class="hover:text-white transition-colors">404 Error Page</a></li>
-                        <li><a href="coming-soon.html" class="hover:text-white transition-colors">Maintenance Page</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing & Policy</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 4: Store Info -->
-                <div>
-                    <h4 class="font-bold text-white text-sm mb-4 uppercase tracking-wider">Warehouse Location</h4>
+                <!-- Col 4: Visit Us -->
+                <div class="space-y-4">
+                    <h4 class="font-bold text-white text-base mb-4 tracking-tight">Visit Us</h4>
                     <div class="space-y-3 text-xs text-slate-400">
                         <div class="flex items-start gap-2.5">
-                            <i class="fa-solid fa-location-dot text-red-500 mt-0.5"></i>
-                            <span>4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</span>
+                            <i class="fa-solid fa-location-dot text-red-500 mt-0.5 text-sm flex-shrink-0"></i>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors leading-relaxed">4820 Motorway Industrial Park, Suite 100, Detroit, MI 48201</a>
                         </div>
                         <div class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-phone text-red-500"></i>
-                            <span>+1 (800) 555-AUTO</span>
+                            <i class="fa-solid fa-phone text-red-500 text-sm flex-shrink-0"></i>
+                            <a href="tel:+18005552886" class="hover:text-white transition-colors">+1 (800) 555-AUTO</a>
                         </div>
                         <div class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-envelope text-red-500"></i>
-                            <span>parts@autopartspro.com</span>
+                            <i class="fa-solid fa-envelope text-red-500 text-sm flex-shrink-0"></i>
+                            <a href="mailto:parts@autopartspro.com" class="hover:text-white transition-colors">parts@autopartspro.com</a>
                         </div>
                         <div class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-clock text-red-500"></i>
-                            <span>Mon–Fri: 7am – 7pm EST</span>
+                            <i class="fa-solid fa-clock text-red-500 text-sm flex-shrink-0"></i>
+                            <span>Mon – Sun: 6:00 AM – 9:00 PM</span>
                         </div>
                     </div>
                 </div>
@@ -265,7 +269,7 @@
 
             <!-- Bottom Copyright Bar -->
             <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <div>&copy; 2026 AutoParts Pro. All rights reserved. ThemeForest Ready Frontend HTML Template.</div>
+                <div dir="ltr">&copy; 2026 AutoParts Pro. All rights reserved. ThemeForest Ready Frontend HTML Template.</div>
                 <div class="flex items-center gap-4 text-lg text-slate-600">
                     <i class="fa-brands fa-cc-visa"></i>
                     <i class="fa-brands fa-cc-mastercard"></i>

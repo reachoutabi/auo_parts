@@ -221,17 +221,17 @@ window.AutoPartsCompatibility = {
         }
 
         resultsContainer.innerHTML = `
-            <div class="mb-6 flex items-center justify-between bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 p-4 rounded-xl">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-lg font-bold">
+            <div class="mb-6 flex items-center justify-between gap-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 p-4 rounded-xl">
+                <div class="flex items-center gap-3" dir="ltr">
+                    <div class="w-10 h-10 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-lg font-bold flex-shrink-0">
                         <i class="fa-solid fa-car"></i>
                     </div>
-                    <div>
+                    <div dir="ltr">
                         <h4 class="font-bold text-slate-900 dark:text-white">Compatible Parts for ${vehicleObj.year} ${vehicleObj.make} ${vehicleObj.model} ${vehicleObj.engine ? '(' + vehicleObj.engine + ')' : ''}</h4>
-                        <p class="text-xs text-emerald-700 dark:text-emerald-400 font-medium">Found ${matchedProducts.length} verified OE & aftermarket compatible parts.</p>
+                        <p class="text-xs text-emerald-700 dark:text-emerald-400 font-medium">Found ${matchedProducts.length} verified OE & aftermarket compatible parts</p>
                     </div>
                 </div>
-                <button type="button" onclick="AutoPartsCompatibility.resetFinder()" class="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-red-600 transition-colors">Change Vehicle</button>
+                <button type="button" onclick="AutoPartsCompatibility.resetFinder()" class="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-red-600 transition-colors flex-shrink-0">Change Vehicle</button>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center justify-items-center">
                 ${matchedProducts.map(p => (window.AutoPartsUI && window.AutoPartsUI.renderProductCardHtml) ? window.AutoPartsUI.renderProductCardHtml(p) : '').join('')}
