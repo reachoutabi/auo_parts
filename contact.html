@@ -142,10 +142,10 @@
         <!-- Standardized Hero Section -->
         <section class="page-hero contact-hero" style="text-align: center !important;">
             <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,38,38,0.18),rgba(0,0,0,0))] pointer-events-none"></div>
-            <div class="contact-header max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full" style="text-align: center !important;">
-                <span class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2 block text-center" style="text-align: center !important;">Customer Support & Technical Inquiries</span>
-                <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight text-center" style="text-align: center !important;">Contact Our Spare Parts Specialists</h1>
-                <p class="text-xs sm:text-sm text-slate-300 mt-2 max-w-xl mx-auto text-center" style="text-align: center !important;">Have a question about fitment, OEM supersessions, or bulk delivery schedules? We're here to help.</p>
+            <div class="contact-header max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full" dir="ltr" style="direction: ltr !important; unicode-bidi: isolate !important; text-align: center !important;">
+                <span class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2 block text-center" dir="ltr" style="direction: ltr !important; unicode-bidi: isolate !important; text-align: center !important;">Customer Support & Technical Inquiries</span>
+                <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight text-center" dir="ltr" style="direction: ltr !important; unicode-bidi: isolate !important; text-align: center !important;">Contact Our Spare Parts Specialists</h1>
+                <p class="text-xs sm:text-sm text-slate-300 mt-2 max-w-xl mx-auto text-center" dir="ltr" style="direction: ltr !important; unicode-bidi: isolate !important; text-align: center !important;">Have a question about fitment, OEM supersessions, or bulk delivery schedules? <span dir="ltr" style="direction: ltr !important; unicode-bidi: isolate !important;">We're here to help.</span></p>
             </div>
         </section>
 
@@ -221,19 +221,19 @@
 
         <!-- Dedicated Interactive Location & Map Section -->
         <section class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-8 shadow-xl space-y-6">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-700 pb-6">
-                <div>
-                    <div class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-red-600 dark:text-red-400 mb-1">
+            <div class="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-200 dark:border-slate-700 pb-6">
+                <div class="flex flex-col items-center text-center space-y-1.5 max-w-2xl mx-auto" dir="ltr">
+                    <div class="inline-flex items-center justify-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-red-600 dark:text-red-400 mb-1 text-center" dir="ltr">
                         <i class="fa-solid fa-map-pin"></i> Direct Warehouse Pickup & Distribution Centers
                     </div>
-                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white flex items-center justify-center gap-2 text-center" dir="ltr">
                         <span>Our Distribution Network</span>
                     </h2>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Visit our main fulfillment hubs for trade counter pickup, parts inspection, or express logistics support.</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 text-center" dir="ltr">Visit our main fulfillment hubs for trade counter pickup, parts inspection, or express logistics support.</p>
                 </div>
                 
                 <!-- Hub Selection Tabs -->
-                <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs font-bold flex-shrink-0">
+                <div class="flex items-center justify-center gap-2 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs font-bold flex-shrink-0 mx-auto" dir="ltr">
                     <button type="button" id="map-tab-detroit" onclick="switchMapLocation('detroit')" class="px-4 py-2 rounded-xl bg-red-600 text-white shadow-md transition-all flex items-center gap-2 font-bold">
                         <i class="fa-solid fa-warehouse"></i>
                         <span>Detroit HQ (Central)</span>
@@ -258,7 +258,7 @@
                             title="AutoParts Pro Central Depot Location Map">
                     </iframe>
                     <!-- Map Badge Overlay -->
-                    <div class="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md text-white px-3 py-1.5 rounded-xl border border-slate-700 text-xs font-bold shadow-lg flex items-center gap-2">
+                    <div class="absolute top-4 right-4 map-badge-overlay bg-slate-900/90 backdrop-blur-md text-white px-3 py-1.5 rounded-xl border border-slate-700 text-xs font-bold shadow-lg flex items-center gap-2 z-10" dir="ltr">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         <span id="map-overlay-title">Central Depot: Detroit, MI</span>
                     </div>

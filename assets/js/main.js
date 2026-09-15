@@ -182,14 +182,24 @@ window.AutoPartsUI = {
 
     updateThemeIcons(theme) {
         // Toggle visibility of moon/sun icons on all theme switcher buttons
-        const isDark = theme === 'dark';
+        const isDark = theme === 'dark' || document.documentElement.classList.contains('dark');
         document.querySelectorAll('.fa-moon').forEach(el => {
-            if (isDark) el.classList.add('hidden');
-            else el.classList.remove('hidden');
+            if (isDark) {
+                el.classList.add('hidden');
+                el.style.display = 'none';
+            } else {
+                el.classList.remove('hidden');
+                el.style.display = 'inline-block';
+            }
         });
         document.querySelectorAll('.fa-sun').forEach(el => {
-            if (isDark) el.classList.remove('hidden');
-            else el.classList.add('hidden');
+            if (isDark) {
+                el.classList.remove('hidden');
+                el.style.display = 'inline-block';
+            } else {
+                el.classList.add('hidden');
+                el.style.display = 'none';
+            }
         });
     },
 

@@ -279,6 +279,25 @@ html:not([dir="rtl"]) main .sm\:flex-row > *,
     transform: scaleX(-1);
 }
 
+/* Map Badge Overlay Positioning (Prevent overlap with Google Map place card on top-left) */
+.map-badge-overlay,
+[dir="rtl"] .map-badge-overlay {
+    right: 1rem !important;
+    left: auto !important;
+    top: 1rem !important;
+}
+
+/* Theme Toggle Icon Mutual Exclusivity (Sun icon in Dark Mode, Moon icon in Light Mode) */
+html.dark .fa-moon,
+html:not(.dark) .fa-sun {
+    display: none !important;
+}
+
+html.dark .fa-sun,
+html:not(.dark) .fa-moon {
+    display: inline-block !important;
+}
+
 /* Contact Page, Page Hero & Centered Headers Alignment (LTR & RTL modes) */
 .contact-hero,
 .contact-hero *,
