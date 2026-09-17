@@ -842,5 +842,18 @@ footer .border-t .fa-brands:hover {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
+
+/* Floating top controls RTL positioning flip */
+.floating-top-controls {
+    transition: left 0.3s ease, right 0.3s ease;
+}
+[dir="rtl"] .floating-top-controls {
+    right: auto !important;
+    left: 1rem !important;
+}
+@media (min-width: 640px) {
+    [dir="rtl"] .floating-top-controls {
+        left: 1.5rem !important;
+    }
 }
 
