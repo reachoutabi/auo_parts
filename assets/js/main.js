@@ -77,7 +77,7 @@ window.AutoPartsUI = {
         return true;
     },
 
-    // AUTH TOP LINK CONTROLLER (Log In vs My Account)
+    // AUTH TOP LINK CONTROLLER (Log In vs Log Out / Home)
     updateAuthTopLink() {
         const authLinks = document.querySelectorAll('.js-auth-top-link');
         const isLoggedIn = window.AutoPartsStore && window.AutoPartsStore.isLoggedIn ? window.AutoPartsStore.isLoggedIn() : false;
@@ -85,16 +85,24 @@ window.AutoPartsUI = {
         authLinks.forEach(link => {
             const hasTextSpan = link.querySelector('span') !== null;
             if (isLoggedIn) {
-                link.setAttribute('href', 'account.html');
-                link.setAttribute('title', 'My Account');
+                link.setAttribute('href', 'index.html');
+                link.setAttribute('title', 'Click to Log Out');
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    if (window.AutoPartsStore && window.AutoPartsStore.logoutUser) {
+                        window.AutoPartsStore.logoutUser();
+                    }
+                    window.location.href = 'index.html';
+                };
                 if (hasTextSpan) {
-                    link.innerHTML = `<i class="fa-solid fa-user-gear"></i> <span>My Account</span>`;
+                    link.innerHTML = `<i class="fa-solid fa-right-from-bracket"></i> <span>Log Out</span>`;
                 } else {
-                    link.innerHTML = `<i class="fa-solid fa-user-gear text-base sm:text-lg"></i>`;
+                    link.innerHTML = `<i class="fa-solid fa-right-from-bracket text-base sm:text-lg text-red-400"></i>`;
                 }
             } else {
                 link.setAttribute('href', 'login.html');
                 link.setAttribute('title', 'Log In to your Account');
+                link.onclick = null;
                 if (hasTextSpan) {
                     link.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> <span>Log In</span>`;
                 } else {
@@ -353,25 +361,35 @@ window.AutoPartsUI = {
                         </div>
                         <span class="text-[9px] bg-blue-600 text-white px-1.5 py-0.5 rounded font-extrabold">NEW</span>
                     </a>
-                    <a href="brands.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
-                        <i class="fa-solid fa-award w-4 text-center text-amber-500"></i>
-                        <span>Brands Directory</span>
+                    <a href="brands.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-award w-4 text-center text-amber-500"></i>
+                            <span>Brands Directory</span>
+                        </div>
                     </a>
-                    <a href="bulk-pricing.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
-                        <i class="fa-solid fa-layer-group w-4 text-center text-purple-500"></i>
-                        <span>Bulk Workshop Pricing</span>
+                    <a href="bulk-pricing.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-layer-group w-4 text-center text-purple-500"></i>
+                            <span>Bulk Workshop Pricing</span>
+                        </div>
                     </a>
-                    <a href="about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
-                        <i class="fa-solid fa-circle-info w-4 text-center text-cyan-500"></i>
-                        <span>About Us</span>
+                    <a href="about.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-info w-4 text-center text-cyan-500"></i>
+                            <span>About Us</span>
+                        </div>
                     </a>
-                    <a href="blog.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
-                        <i class="fa-solid fa-newspaper w-4 text-center text-orange-500"></i>
-                        <span>Tech Blog</span>
+                    <a href="blog.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-newspaper w-4 text-center text-orange-500"></i>
+                            <span>Tech Blog</span>
+                        </div>
                     </a>
-                    <a href="contact.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
-                        <i class="fa-solid fa-headset w-4 text-center text-rose-500"></i>
-                        <span>Contact Support</span>
+                    <a href="contact.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-600 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-headset w-4 text-center text-rose-500"></i>
+                            <span>Contact Support</span>
+                        </div>
                     </a>
                 </div>
 
@@ -402,13 +420,15 @@ window.AutoPartsUI = {
 
                 <!-- Account & Hotline -->
                 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-3">
-                    <a href="account.html" class="flex items-center justify-between p-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800/60 rounded-xl text-xs font-bold text-red-600 dark:text-red-400">
-                        <div class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-user-gear"></i>
-                            <span>My Customer Account</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                    </a>
+                    <div class="js-mobile-auth-btn-wrapper">
+                        <a href="login.html" class="flex items-center justify-between p-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800/60 rounded-xl text-xs font-bold text-red-600 dark:text-red-400">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                                <span>Log In to Account</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
 
                     <div class="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300 p-2">
                         <span>Parts Hotline:</span>
@@ -456,6 +476,32 @@ window.AutoPartsUI = {
                     <a href="compatibility-finder.html" class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400">
                         <i class="fa-solid fa-car"></i>
                         <span>Select Your Vehicle &rarr;</span>
+                    </a>
+                `;
+            }
+        }
+
+        const drawerAuth = document.querySelector('.js-mobile-auth-btn-wrapper');
+        if (drawerAuth) {
+            const isLoggedIn = window.AutoPartsStore && window.AutoPartsStore.isLoggedIn ? window.AutoPartsStore.isLoggedIn() : false;
+            if (isLoggedIn) {
+                drawerAuth.innerHTML = `
+                    <button type="button" onclick="if(window.AutoPartsStore && window.AutoPartsStore.logoutUser) window.AutoPartsStore.logoutUser(); window.location.href='index.html';" class="w-full flex items-center justify-between p-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800/60 rounded-xl text-xs font-bold text-red-600 dark:text-red-400">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Log Out</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                `;
+            } else {
+                drawerAuth.innerHTML = `
+                    <a href="login.html" class="flex items-center justify-between p-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800/60 rounded-xl text-xs font-bold text-red-600 dark:text-red-400">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                            <span>Log In to Account</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
                     </a>
                 `;
             }

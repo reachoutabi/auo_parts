@@ -174,8 +174,7 @@
                 companyName: company || 'Personal Vehicle Owner',
                 isLoggedIn: true
             });
-            const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'account.html';
-            window.location.href = redirectTarget;
+            window.location.href = 'index.html';
         }
 
         function handleSocialRegister(provider) {
@@ -201,8 +200,7 @@
                     window.AutoPartsUI.showToast(`Account created with ${provider}! Welcome.`, 'success');
                 }
                 setTimeout(() => {
-                    const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'account.html';
-                    window.location.href = redirectTarget;
+                    window.location.href = 'index.html';
                 }, 300);
             }, 500);
         }
